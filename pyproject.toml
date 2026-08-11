@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "record-index"
+version = "0.1.0"
+description = "A governed SQLite+FTS5 map over a markdown decision record — query the record instead of reading it, with per-repo conventions declared rather than hard-coded."
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "mcp-tool-shop", email = "64996768+mcp-tool-shop@users.noreply.github.com" },
+]
+keywords = ["sqlite", "fts5", "provenance", "decision-record", "index", "governance"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Indexing",
+]
+
+# STDLIB ONLY, and that is a property rather than an accident. The index is
+# sqlite3 + re + json; a consuming repo installs one package and gets no
+# transitive surface. The MCP server that serves this index is a separate
+# concern and carries its own dependency where it lands.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/mcp-tool-shop-org/record-index"
+Source = "https://github.com/mcp-tool-shop-org/record-index"
+
+[tool.setuptools]
+packages = ["record_index"]
