@@ -41,14 +41,20 @@ axis — markers, corpus roots, arc rules, verdict vocabulary, header forms — 
 implementation has somewhere to become visible. **Dependencies: none.** Stdlib only
 (`sqlite3` + `re` + `json`), and that is a declared property, not an accident.
 
-**Four defects are known, reproduced, and pinned in-tree as `xfail(strict=True)` tests**
+**Five defects are known, reproduced, and pinned in-tree as `xfail(strict=True)` tests**
 rather than hidden: `verify()` doubles its diagnostic counts (gating legs unaffected); the
 claim-arc pattern assumes `E`-numbered arcs; the sub-ruling locator is not derived from the
-declared header form; and four declaration fields cannot be declared honestly empty. None
-affects the two current consumers; all four are queued for the next version.
+declared header form; four declaration fields cannot be declared honestly empty; and — found
+by facet's clean-venv release gate after 0.1.0 shipped — a rootless `Binding` reaching
+`db_default()` exits `2` RUNTIME_ERROR where the exit-code contract promises `4` REFUSED
+with the run-from-a-checkout message. None breaks the two current consumers (facet's
+adapter carries its own `db_default`); all five are queued for 0.1.1. *(This paragraph said
+"four" from 0.1.0's release until 2026-08-11, same day — corrected in place when the fifth
+was found.)*
 
-**Not yet on PyPI.** `release.yml` publishes via OIDC Trusted Publishing when a GitHub
-release is created; nothing publishes on push.
+**On PyPI as 0.1.0** via OIDC Trusted Publishing (`release.yml` fires on a GitHub release;
+nothing publishes on push). *(This line said "not yet on PyPI" until the v0.1.0 release,
+2026-08-11.)*
 
 ## Where this comes from
 

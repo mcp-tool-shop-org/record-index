@@ -104,3 +104,11 @@ with a number attached. None affects the two current consumers.
   under.
 
 [0.1.0]: https://github.com/mcp-tool-shop-org/record-index/releases/tag/v0.1.0
+
+## Unreleased — queued for 0.1.1
+
+- **Fifth known defect pinned** (found by facet's clean-venv release gate, 2026-08-11,
+  after 0.1.0 shipped): a rootless `Binding` reaching `db_default()` exits `2`
+  RUNTIME_ERROR where the exit-code contract promises `4` REFUSED. Pinned strict-xfail in
+  `tests/test_cli.py`; fix lands here in 0.1.1 alongside the four defects 0.1.0 shipped
+  with.

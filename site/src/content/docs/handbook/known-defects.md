@@ -1,11 +1,11 @@
 ---
 title: Known defects
-description: Four defects pinned as strict-xfail tests, and three behaviours pinned as measured rather than as approved.
+description: Five defects pinned as strict-xfail tests, and three behaviours pinned as measured rather than as approved.
 sidebar:
   order: 5
 ---
 
-Four defects are known, reproduced, and pinned in-tree as `xfail(strict=True)` tests rather
+Five defects are known, reproduced, and pinned in-tree as `xfail(strict=True)` tests rather
 than hidden. **Strict** matters: the day one is fixed, the suite fails until the test and
 this page are both updated. A defect that quietly starts passing is a defect nobody
 finds out was fixed.
@@ -132,6 +132,23 @@ Three behaviours are pinned by ordinary tests that say, in their own docstrings,
 record what the tool *does* rather than what it *should* do. They are not defects and not
 endorsements; they are the places where a reader should know the answer was measured rather
 than designed.
+
+
+## 5 — A rootless `Binding` on a db verb exits 2, not 4
+
+*Found after 0.1.0 shipped, by facet's clean-venv release gate (2026-08-11); this page said
+"four" until the same day.*
+
+`Binding.db_default()` is `os.path.join(self.root, ...)`. Construct a `Binding` whose root
+is `None` — which is exactly what a consumer's console script holds when run outside a
+checkout — and a db verb with no `--db` and no `$DB_ENV` reaches `db_default()`, raises
+`TypeError`, and `run_contract`'s generic branch reports **RUNTIME_ERROR, exit 2** with a
+traceback pointer. The exit-code contract promises **REFUSED, exit 4** carrying the
+run-from-a-checkout-or-pass-`--db` message that the `RootNotFound` branch already owns.
+
+Pinned by `tests/test_cli.py::test_a_rootless_binding_on_a_db_verb_refuses_rather_than_erroring`.
+The fix belongs in `db_default` or `main`'s `--db` precedence — not in every caller's
+adapter, though facet's adapter carries its own guard today.
 
 ## A `count_checks` leg naming an absent file exits 2, not 4
 

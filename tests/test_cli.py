@@ -425,3 +425,24 @@ def test_a_corpus_verb_with_no_corpus_refuses_rather_than_breaking(tmp_path):
     assert rc == EXIT_REFUSED, (rc, err)
     assert "REFUSED" in err
     assert "ALPHA_INDEX_DB" in err
+
+
+@pytest.mark.xfail(strict=True, reason=(
+    "Fifth known defect, found by facet's clean-venv release gate 2026-08-11: "
+    "a rootless Binding reaching db_default() raises TypeError from "
+    "os.path.join(None, ...), and run_contract's generic branch reports that "
+    "as RUNTIME_ERROR (2). The exit-code contract wants REFUSED (4) carrying "
+    "the run-from-a-checkout-or-pass---db message RootNotFound already owns. "
+    "The fix belongs in db_default or main's --db precedence, not in every "
+    "caller's adapter."))
+def test_a_rootless_binding_on_a_db_verb_refuses_rather_than_erroring(
+        alpha, monkeypatch):
+    """Outside a checkout, `q` with no --db must refuse, not crash.
+
+    facet's adapter hit this live: its console script built a rootless Binding,
+    the db-precedence line called db_default(), and the reader got exit 2 with
+    a traceback pointer where E24's contract promises exit 4 naming the fix."""
+    monkeypatch.delenv(alpha.conv.db_env, raising=False)
+    rootless = record_index.Binding(None, alpha.conv)
+    rc = C.run_contract(lambda argv: C.main(rootless, argv), ["q", "any term"])
+    assert rc == EXIT_REFUSED
