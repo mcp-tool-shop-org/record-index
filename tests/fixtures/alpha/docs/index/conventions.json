@@ -1,0 +1,311 @@
+{
+  "schema": "record-index-conventions/1",
+  "_note": "alpha's declaration. A fixture, authored so every field record-index requires has a site and so the counts a hand derivation predicts are small enough to check. Where a value differs from the second fixture repo (beta), the difference is the point: conventions are DECLARED, and a tool that only worked on this shape would be reading one repo's habits as a law.",
+  "repo": {
+    "name": "alpha",
+    "db_rel": "docs/index/alpha.db",
+    "db_env": "ALPHA_INDEX_DB"
+  },
+  "markers": [
+    "CLAUDE.md",
+    "docs/experiments"
+  ],
+  "corpora": {
+    "experiments_dir": "docs/experiments",
+    "record_roots": [
+      "docs"
+    ],
+    "record_top_files": [
+      "CLAUDE.md",
+      "OVERVIEW.md"
+    ],
+    "law_files": [
+      "CLAUDE.md"
+    ],
+    "_prose_files": "docs/absent-by-declaration.md is DELIBERATELY ABSENT. A declared corpus that is not on disk is a reported finding, never a raise — three parsers used to raise FileNotFoundError on a file list belonging to a different repo, and this fixture keeps that path exercised.",
+    "prose_files": [
+      "OVERVIEW.md",
+      "docs/handbook/index.md",
+      "docs/absent-by-declaration.md"
+    ],
+    "profile_files": [
+      "profiles/character.json"
+    ],
+    "experiments_table": "docs/experiments/INDEX.md",
+    "sweep_extra_files": [
+      "CHANGELOG.md"
+    ],
+    "sweep_extra_dirs": []
+  },
+  "discovery": {
+    "ruling_doc": "^E\\d\\d-.*ruling.*\\.md$",
+    "kickoff_doc": "^E\\d\\d-.*kickoff.*\\.md$",
+    "_ruling_arc": "STEM-DERIVED, and load-bearing in this fixture specifically: E02-ruling.md and E02-offsurface-ruling.md both number their rulings from one. Stem-derived they are two arcs; keyed on the leading E-number they are one arc and collide on two primary keys.",
+    "ruling_arc": {
+      "strip_from": "ruling"
+    },
+    "kickoff_arc": {
+      "leading": true
+    },
+    "experiment_prefix": "^(E\\d\\d)",
+    "experiment_file": "^E\\d\\d[-.]",
+    "spec_file_fragments": [
+      "kickoff",
+      "spec"
+    ],
+    "report_file_fragment": "report",
+    "topical_ruling_files": []
+  },
+  "headers": {
+    "ruling": [
+      "^## Ruling (\\d+)\\b(.*)$"
+    ],
+    "addenda": [
+      "^## Post-ingest addenda\\s*(\\d*)\\b(.*)$"
+    ],
+    "amendment": [
+      "^> ### Amendment (\\d+) \\((.*)$"
+    ],
+    "handoff": [
+      "^## Session handoff\\s*(\\d*)\\s*\\((.*)$"
+    ],
+    "sub_ruling": "^\\*\\*(\\d+)([a-z])\\s+[—–-]",
+    "sub_closure": "^\\*\\*(\\d+)([a-z])-([A-Z][A-Z-]+)\\b"
+  },
+  "vocabularies": {
+    "_verdicts": "Deliberately SHORT. CORRECTED, BANKED and MEASURED are shouted in this record and are absent from this list, so the verdict counter has three real misses to name. A vocabulary that recognised everything would be a counter that reads the same when it works and when it does nothing.",
+    "verdicts": [
+      "ACCEPTED",
+      "REJECTED",
+      "RATIFIED",
+      "WITHDRAWN",
+      "FALSIFIED",
+      "CLOSED"
+    ],
+    "authority": {
+      "pattern": "\\bDirector\\b",
+      "named": "Director",
+      "default": "advisor"
+    },
+    "experiment_status": [
+      "ACCEPTED",
+      "RULED",
+      "IN FLIGHT",
+      "CLOSED"
+    ],
+    "status_words": [
+      [
+        "ACCEPTED",
+        "\\bACCEPTED\\b"
+      ],
+      [
+        "SUPERSEDED",
+        "\\bSUPERSEDED\\b|\\bsuperseded\\b"
+      ]
+    ],
+    "_artifact_kinds": "mp4 is in artifact_extensions and NOT in this map, on purpose. That is the exact silent drop this package's vocabulary counters were built for: six video mentions vanished from a record whose product is video, and an empty table looked the same as a table that had discarded them.",
+    "artifact_kinds": {
+      "glb": "mesh",
+      "png": "render",
+      "json": "data"
+    },
+    "artifact_extensions": [
+      "glb",
+      "json",
+      "mp4",
+      "png"
+    ],
+    "phenomenon_markers": [
+      [
+        "banked",
+        "is BANKED as a measured phenomenon"
+      ]
+    ],
+    "supersede_verbs": [
+      "CORRECTED",
+      "corrected",
+      "WITHDRAWN",
+      "withdrawn"
+    ]
+  },
+  "_laws": "The attribution pattern covers E01 and E02 only, while one law's body mentions E03 alone. That law's paid_for_by is null and the counter names E03 — which is the shape of the defect measured on a real record, where half a law book carried a null attribution silently.",
+  "laws": {
+    "paid_for_by": "\\b(E0[1-2])\\b"
+  },
+  "sweep": {
+    "current_state_files": [
+      "CLAUDE.md",
+      "OVERVIEW.md"
+    ],
+    "_current_state_dirs": "MEASURED, and it is a constraint rather than a choice: `sweep.current_state_dirs` is not in the package's MAY_BE_EMPTY set, so a repo with no current-state directory cannot declare that it has none — the loader refuses the empty list. alpha therefore has a real one.",
+    "current_state_dirs": [
+      "docs/handbook/"
+    ],
+    "historical_dirs": [
+      "docs/experiments/"
+    ],
+    "bannered": "",
+    "banner": "SUPERSEDED",
+    "split_at_release": "CHANGELOG.md",
+    "current_state_extra": {},
+    "historical_extra": {},
+    "_self_reference_exclude": "E02-report.md quotes a count as data. Without the exclusion the sweep would flag its own subject matter; with it, the whole file is skipped.",
+    "self_reference_exclude": [
+      "E02-report"
+    ],
+    "_claim_families": "Four families, and DELIBERATELY not one for experiments-as-a-cardinal: `3 experiments` is count-claim-shaped, no family parses it, and it must surface as unparseable rather than be guessed at.",
+    "claim_families": [
+      {
+        "label": "rulings range",
+        "kind": "ruling",
+        "unit": "max",
+        "pattern": "\\bRulings?\\s+1\\s*[–—-]\\s*(\\d+)"
+      },
+      {
+        "label": "rulings cardinal",
+        "kind": "ruling",
+        "unit": "count",
+        "pattern": "\\b(\\d+)\\s+rulings\\b"
+      },
+      {
+        "label": "handoffs cardinal",
+        "kind": "handoff",
+        "unit": "count",
+        "pattern": "\\b(\\d+)\\s+handoffs\\b"
+      },
+      {
+        "label": "experiment span",
+        "kind": "experiment",
+        "unit": "max",
+        "pattern": "\\bE01\\s*[–—-]\\s*E?(\\d+)"
+      }
+    ]
+  },
+  "verify": {
+    "_count_checks": "The verifier's OWN greps, written against the file rather than reusing the parser's patterns, so the two are not one implementation checking itself.",
+    "count_checks": [
+      [
+        "E01 numbered rulings",
+        "docs/experiments/E01-ruling.md",
+        "^## Ruling (\\d+)\\b",
+        "rulings",
+        "arc='E01' AND kind='ruling'"
+      ],
+      [
+        "E01 lettered sub-rulings",
+        "docs/experiments/E01-ruling.md",
+        "^\\*\\*\\d+[a-z] +[—–-]",
+        "rulings",
+        "arc='E01' AND kind='sub-ruling'"
+      ],
+      [
+        "E01 closure markers",
+        "docs/experiments/E01-ruling.md",
+        "^\\*\\*\\d+[a-z]-[A-Z]",
+        "rulings",
+        "arc='E01' AND kind='sub-ruling-closure'"
+      ],
+      [
+        "E01 post-ingest addenda",
+        "docs/experiments/E01-ruling.md",
+        "^## Post-ingest addenda",
+        "rulings",
+        "arc='E01' AND kind='addendum'"
+      ],
+      [
+        "E01 amendments",
+        "docs/experiments/E01-ruling.md",
+        "^> ### Amendment (\\d+) \\(",
+        "rulings",
+        "arc='E01' AND kind='amendment'"
+      ],
+      [
+        "E02 numbered rulings",
+        "docs/experiments/E02-ruling.md",
+        "^## Ruling (\\d+)\\b",
+        "rulings",
+        "arc='E02' AND kind='ruling'"
+      ],
+      [
+        "E02off numbered rulings",
+        "docs/experiments/E02-offsurface-ruling.md",
+        "^## Ruling (\\d+)\\b",
+        "rulings",
+        "arc='E02-offsurface' AND kind='ruling'"
+      ],
+      [
+        "E01 handoffs",
+        "docs/experiments/E01-executor-kickoff.md",
+        "^## Session handoff",
+        "handoffs",
+        "arc='E01'"
+      ]
+    ],
+    "sequences": [
+      [
+        "E01",
+        "ruling",
+        1,
+        2
+      ],
+      [
+        "E02",
+        "ruling",
+        1,
+        2
+      ],
+      [
+        "E02-offsurface",
+        "ruling",
+        1,
+        2
+      ]
+    ],
+    "handoff_coverage": {
+      "arc": "E01",
+      "lo": 1,
+      "hi": 2,
+      "expect_missing": []
+    },
+    "experiment_coverage": {
+      "prefix": "E",
+      "lo": 1,
+      "hi": 3
+    },
+    "_seeded": "Every phrase here was run report-only through `q` BEFORE it entered the gate, and its target ranked within the top 3 on that run. Seeds are ruled in from measured ranks; a seed added and then tuned until green is a check that cannot fail.",
+    "seeded": [
+      [
+        "the depth pass normalization",
+        "depth pass normalization ratified manifest",
+        [
+          "docs/experiments/E01-ruling.md",
+          "Ruling 1a"
+        ]
+      ],
+      [
+        "the between-generation floor",
+        "between-generation floor portable repeat runs seed",
+        [
+          "docs/experiments/E02-ruling.md",
+          "Ruling 2"
+        ]
+      ],
+      [
+        "the off-surface margin",
+        "off-surface margin banked measured phenomenon",
+        [
+          "docs/experiments/E02-offsurface-ruling.md",
+          "Ruling 1"
+        ]
+      ],
+      [
+        "why big binaries stay out of git",
+        "big binaries stay out of git renders committed",
+        [
+          "CLAUDE.md",
+          null
+        ]
+      ]
+    ]
+  }
+}

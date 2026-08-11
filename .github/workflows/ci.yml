@@ -1,0 +1,58 @@
+name: CI
+
+# PATHS-GATED, never "all pushes". The workflow file itself is in the filter so
+# a change to CI is tested by CI; workflow_dispatch is the manual fallback.
+on:
+  push:
+    paths:
+      - "pyproject.toml"
+      - "record_index/**"
+      - "tests/**"
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - "pyproject.toml"
+      - "record_index/**"
+      - "tests/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      # THE FLOOR AND THE CEILING, and nothing between them. `requires-python`
+      # says >=3.11, so 3.11 is the oldest interpreter this package promises to
+      # install on and 3.13 is the newest it claims in its classifiers. A matrix
+      # that tested only one of them would leave half the promise unmeasured.
+      matrix:
+        python-version: ["3.11", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # pytest is installed HERE rather than declared as an extra. The runtime
+      # dependency list is empty and that is a property the package is sold on:
+      # a consuming repo installs one package and inherits no transitive
+      # surface. A test extra would put pytest in the project metadata, and the
+      # suite asserts that the list stays empty.
+      - name: Install the package and the test runner
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install pytest
+
+      - name: Show what is installed
+        run: python -m pip list
+
+      - name: Run the suite
+        run: python -m pytest tests -q

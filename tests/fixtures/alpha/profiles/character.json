@@ -1,0 +1,21 @@
+{
+  "name": "character",
+  "_still_suspended": {
+    "backdrop_word": "SUSPENDED — until a second subject is measured, because one subject is not a population."
+  },
+  "tools": {
+    "turn_render": {
+      "_calibrated_on": "alpha@2026-02, one subject",
+      "views": {
+        "value": 8,
+        "why": "DECIDED — eight eye-level cameras, ruled in E01.",
+        "from": "E01 Ruling 1"
+      },
+      "elevation": {
+        "value": 0,
+        "why": "the elevated cameras are closed and nothing re-opens them without a falsifier",
+        "from": "E01 Ruling 1a"
+      }
+    }
+  }
+}

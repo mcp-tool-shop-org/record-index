@@ -1,0 +1,204 @@
+{
+  "schema": "record-index-conventions/1",
+  "_note": "beta's declaration. Every field that CAN differ from alpha's does: the markers, the corpus root, the document-kind word, the arc rules (both of them, and each is the branch alpha does not use), the verdict vocabulary, the authority word, the artifact extensions, the phrasing family. This file also lives at index/conventions.json rather than under docs/, because the declaration's own location is a parameter and not a constant.",
+  "repo": {
+    "name": "beta",
+    "db_rel": "index/beta.db",
+    "db_env": "BETA_INDEX_DB"
+  },
+  "_markers": "NOT CLAUDE.md. A resolver keyed on a conventional filename would bind nothing here.",
+  "markers": [
+    "LAWS.md",
+    "record/arcs"
+  ],
+  "corpora": {
+    "experiments_dir": "record/arcs",
+    "_record_roots": "The repo root itself, which is what makes the undeclared-but-present direction of the audit reachable: loose/stray.md is walked, is on no declared list, and sits under no declared root prefix.",
+    "record_roots": [
+      "."
+    ],
+    "record_top_files": [
+      "LAWS.md",
+      "OVERVIEW.md"
+    ],
+    "law_files": [
+      "LAWS.md"
+    ],
+    "prose_files": [],
+    "profile_files": [],
+    "experiments_table": "",
+    "sweep_extra_files": [],
+    "sweep_extra_dirs": []
+  },
+  "discovery": {
+    "ruling_doc": "^A\\d\\d-.*decision.*\\.md$",
+    "_kickoff_doc": "MATCHES NOTHING TODAY, and that is measured rather than assumed: beta has no brief documents at all. The pattern is declared so a brief, if one is ever written, is discovered rather than silently missed.",
+    "kickoff_doc": "^A\\d\\d-.*brief.*\\.md$",
+    "_ruling_arc": "THE LEADING-TOKEN RULE — the branch alpha does not use. beta's two decision documents carry different leading tokens, so no collision is possible here and the identity rule can be the simple one.",
+    "ruling_arc": {
+      "leading": true
+    },
+    "_kickoff_arc": "AND THE OTHER BRANCH AGAIN, inverted: beta strips from the keyword where alpha takes the leading token. The asymmetry between a repo's two arc rules is real, and declaring both is what stops it being a surprise.",
+    "kickoff_arc": {
+      "strip_from": "brief"
+    },
+    "experiment_prefix": "^(A\\d\\d)",
+    "experiment_file": "^A\\d\\d[-.]",
+    "spec_file_fragments": [
+      "brief",
+      "proposal"
+    ],
+    "report_file_fragment": "report",
+    "topical_ruling_files": []
+  },
+  "headers": {
+    "_ruling": "TWO FORMS, and A01-decision.md carries both. A shared tool that hard-codes one of them reads the other document as zero rows and says nothing about it.",
+    "ruling": [
+      "^## Decision (\\d+)\\b(.*)$",
+      "^## (\\d+)\\. RULING\\b(.*)$"
+    ],
+    "_addenda": "Declared empty. beta writes none.",
+    "addenda": [],
+    "_amendment": "Declared empty. beta writes none.",
+    "amendment": [],
+    "handoff": [
+      "^## Session handoff\\s*(\\d*)\\s*\\((.*)$"
+    ],
+    "sub_ruling": "^\\*\\*(\\d+)([a-z])\\s+[—–-]",
+    "sub_closure": "^\\*\\*(\\d+)([a-z])-([A-Z][A-Z-]+)\\b"
+  },
+  "vocabularies": {
+    "_verdicts": "beta's own words, sharing none with alpha's. UPHELD is deliberately not a past participle in the -ED/-EN form the announcement probe looks for, so it exercises the counter's stated blind spot: a holding that says `is UPHELD` is outside the population and is neither a hit nor a miss.",
+    "verdicts": [
+      "UPHELD",
+      "OVERTURNED",
+      "SHIPPED"
+    ],
+    "authority": {
+      "pattern": "\\bChief\\b",
+      "named": "Chief",
+      "default": "deputy"
+    },
+    "experiment_status": [
+      "OPEN",
+      "SHIPPED"
+    ],
+    "status_words": [
+      [
+        "SHIPPED",
+        "\\bSHIPPED\\b"
+      ]
+    ],
+    "_artifact_kinds": "COMPLETE for this record: every extension beta's pipeline emits has a kind, so the artifact counter reads zero unrecognised. alpha's reads non-zero. A counter that read the same on both would not be measuring anything.",
+    "artifact_kinds": {
+      "glb": "mesh",
+      "mkv": "video",
+      "mp4": "video"
+    },
+    "artifact_extensions": [
+      "glb",
+      "mkv",
+      "mp4"
+    ],
+    "_phenomenon_markers": "Declared empty. beta does not mint phenomena, so it gets no phenomena table rather than inheriting a vocabulary that describes another repo's prose.",
+    "phenomenon_markers": [],
+    "supersede_verbs": [
+      "OVERTURNED",
+      "overturned"
+    ]
+  },
+  "_laws": "No attribution pattern at all. Declared empty rather than borrowed, so paid_for_by is null everywhere by declaration and the attribution vocabulary is never created.",
+  "laws": {
+    "paid_for_by": ""
+  },
+  "sweep": {
+    "current_state_files": [
+      "LAWS.md",
+      "OVERVIEW.md"
+    ],
+    "_current_state_dirs": "beta would declare this empty if it could. It cannot: `sweep.current_state_dirs` is absent from the package's MAY_BE_EMPTY set, so the loader refuses `[]` and a repo whose honest answer is `none` must name a directory instead. beta therefore has live/, which is a real directory carrying a real current-state document.",
+    "current_state_dirs": [
+      "live/"
+    ],
+    "historical_dirs": [
+      "record/arcs/"
+    ],
+    "bannered": "",
+    "banner": "SUPERSEDED",
+    "split_at_release": "",
+    "current_state_extra": {},
+    "historical_extra": {},
+    "self_reference_exclude": [],
+    "_claim_families": "beta's phrasing, not alpha's: this record says decisions where alpha says rulings, and a family list copied from another repo would find zero sites here and report nothing wrong.",
+    "claim_families": [
+      {
+        "label": "decisions cardinal",
+        "kind": "ruling",
+        "unit": "count",
+        "pattern": "\\b(\\d+)\\s+decisions\\b"
+      }
+    ]
+  },
+  "verify": {
+    "count_checks": [
+      [
+        "A01 decisions, both forms",
+        "record/arcs/A01-decision.md",
+        "^## (?:\\d+\\. RULING|Decision \\d+)\\b",
+        "rulings",
+        "arc='A01' AND kind='ruling'"
+      ],
+      [
+        "A02 decisions",
+        "record/arcs/A02-decision.md",
+        "^## Decision (\\d+)\\b",
+        "rulings",
+        "arc='A02' AND kind='ruling'"
+      ],
+      [
+        "A02 lettered sub-decisions",
+        "record/arcs/A02-decision.md",
+        "^\\*\\*\\d+[a-z] +[—–-]",
+        "rulings",
+        "arc='A02' AND kind='sub-ruling'"
+      ]
+    ],
+    "sequences": [
+      [
+        "A01",
+        "ruling",
+        1,
+        2
+      ],
+      [
+        "A02",
+        "ruling",
+        1,
+        1
+      ]
+    ],
+    "_handoff_coverage": "NULL BY DECLARATION — beta has no handoff documents at all, so a coverage check here would be a check that cannot fail.",
+    "handoff_coverage": null,
+    "_experiment_coverage": "NULL BY DECLARATION for the same reason: beta's arcs are still opening and a fixed span would go stale the week it was written.",
+    "experiment_coverage": null,
+    "_seeded": "Both phrases ran report-only through `q` before entering the gate.",
+    "seeded": [
+      [
+        "which route was upheld",
+        "the first route is UPHELD end to end",
+        [
+          "record/arcs/A01-decision.md",
+          "Ruling 1"
+        ]
+      ],
+      [
+        "what happened to the second clip",
+        "the second clip is OVERTURNED",
+        [
+          "record/arcs/A02-decision.md",
+          "Ruling 1a"
+        ]
+      ]
+    ]
+  }
+}
