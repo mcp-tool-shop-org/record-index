@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "record-index"
 version = "0.1.0"
 description = "A governed SQLite+FTS5 map over a markdown decision record — query the record instead of reading it, with per-repo conventions declared rather than hard-coded."
+readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]

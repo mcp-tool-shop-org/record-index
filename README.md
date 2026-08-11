@@ -7,11 +7,32 @@ rather than the six hundred it would have skimmed.
 The markdown stays canonical. The index is derived, regenerated on every fold, gated by a
 four-leg `verify`, and **wrong by definition the day it is hand-edited**.
 
-## Status — SCAFFOLD ONLY
+## Status — extracted, tested, not yet on PyPI
 
-**No tool code is in this repo yet.** This commit exists to satisfy the repo-first rule
-(repo exists · `origin` correct · default branch `main` · scaffold pushed **before** any
-tool code). The extraction that fills it is halted on a gate — see below.
+*(This section read "SCAFFOLD ONLY — no tool code is in this repo yet" until 2026-08-11,
+which the extraction landing falsified. Corrected in place.)*
+
+**The extraction landed.** The package is on `main`, gated on the way in by byte-identity
+with facet's in-tree build (19/19) and **zero row-level differences** on the same corpus.
+Two consumers run on it: [facet](https://github.com/mcp-tool-shop-org/facet), whose ~2,462
+in-tree lines became a declaration plus an adapter with ~140 of its tests exercising the
+package through it, and [armature](https://github.com/mcp-tool-shop-org/armature), whose
+own index seeded 15/15 with 47 rulings.
+
+**The package carries its own suite: 455 checks** across all ten modules, run in CI on
+Python 3.11 and 3.13, built on two fixture record-repos that disagree on every declarable
+axis — markers, corpus roots, arc rules, verdict vocabulary, header forms — so a wrong
+implementation has somewhere to become visible. **Dependencies: none.** Stdlib only
+(`sqlite3` + `re` + `json`), and that is a declared property, not an accident.
+
+**Four defects are known, reproduced, and pinned in-tree as `xfail(strict=True)` tests**
+rather than hidden: `verify()` doubles its diagnostic counts (gating legs unaffected); the
+claim-arc pattern assumes `E`-numbered arcs; the sub-ruling locator is not derived from the
+declared header form; and four declaration fields cannot be declared honestly empty. None
+affects the two current consumers; all four are queued for the next version.
+
+**Not yet on PyPI.** `release.yml` publishes via OIDC Trusted Publishing when a GitHub
+release is created; nothing publishes on push.
 
 ## Where this comes from
 
@@ -39,17 +60,18 @@ Every vocabulary reports what it **did not recognise**. An empty table and a tab
 silently discarded six artifacts are indistinguishable at the call site, and only one of
 them is correct.
 
-## Why the build is halted
+## The halt that used to be here, and how it ended
 
-The classification step measured facet's parsers against armature's record and the
-extraction was re-specified from what it found. One item of that re-specification —
-deriving a document's arc from its leading `E\d\d` prefix — was measured against facet
-before it was built and **collides on 7 primary keys**: `E10-ruling.md` and
-`E10-offsurface-ruling.md` both become arc `E10` and their rulings 1–7 are the same key.
+*(Until 2026-08-11 this section halted the build on a measured collision. The halt was
+real, the ruling came, and the build proceeded — kept here as the trail rather than
+deleted.)*
 
-The evidence, and the interaction with the ruling-header item that makes the two jointly
-fatal on armature as well, are reported in `armature/docs/dispatches/`. Nothing is built on
-it until it is ruled.
+The classification step had measured that deriving a document's arc from its leading
+`E\d\d` prefix **collides on 7 primary keys** against facet (`E10-ruling.md` and
+`E10-offsurface-ruling.md` both become arc `E10`). The executor caught it against a test
+whose name records the same failure, the joint ruling was withdrawn and re-derived, and
+the extraction proceeded through its gates. The trail — evidence, the overturned answers,
+and the ruling that replaced them — is in `armature/docs/dispatches/` (the S02 arc).
 
 ## Licence
 
