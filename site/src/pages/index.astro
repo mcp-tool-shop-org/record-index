@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import BaseLayout from '@mcptoolshop/site-theme/components/BaseLayout.astro';
+import Hero from '@mcptoolshop/site-theme/components/Hero.astro';
+import Section from '@mcptoolshop/site-theme/components/Section.astro';
+import FeatureGrid from '@mcptoolshop/site-theme/components/FeatureGrid.astro';
+import DataTable from '@mcptoolshop/site-theme/components/DataTable.astro';
+import CodeCardGrid from '@mcptoolshop/site-theme/components/CodeCardGrid.astro';
+import { config } from '../site-config';
+
+// Hand-written rather than mapped from config.sections: the section titles are
+// sentences, not nav labels, and the handbook is not a section.
+const nav = [
+  { href: '#what-it-does', label: 'What it does' },
+  { href: '#numbers', label: 'Numbers' },
+  { href: '#verify', label: 'Verify' },
+  { href: '#not-solved', label: 'Not solved' },
+  { href: 'handbook/', label: 'Handbook' },
+];
+
+const repo = config.repoUrl;
+const links = [
+  {
+    href: 'handbook/',
+    label: 'Handbook',
+    desc: 'What it is, how to adopt it, the declaration fields, the verify legs, and the defects in full.',
+  },
+  {
+    href: repo,
+    label: 'GitHub',
+    desc: 'The source. Ten modules, stdlib only, and the suite that measures both.',
+  },
+  {
+    href: `${repo}/tree/main/tests`,
+    label: 'The suite',
+    desc: '455 checks over two fixture record-repos that disagree on every declarable axis.',
+  },
+  {
+    href: `${repo}/blob/main/CHANGELOG.md`,
+    label: 'Changelog',
+    desc: 'What 0.1.0 marks, and what it deliberately does not.',
+  },
+  {
+    href: `${repo}/blob/main/SECURITY.md`,
+    label: 'Security',
+    desc: 'Data touched, egress measured rather than asserted, and the sharp edges disclosed.',
+  },
+  {
+    href: 'https://github.com/mcp-tool-shop-org/facet',
+    label: 'facet',
+    desc: 'Where every convention here was paid for, and the first consumer.',
+  },
+];
+---
+
+<BaseLayout
+  title={config.title}
+  description={config.description}
+  logoBadge={config.logoBadge}
+  brandName={config.brandName}
+  repoUrl={config.repoUrl}
+  footerText={config.footerText}
+  nav={nav}
+>
+  <Hero {...config.hero} />
+
+  {config.sections.map((s) => (
+    <Section id={s.id} title={s.title} subtitle={s.subtitle}>
+      {s.kind === 'features' && <FeatureGrid features={s.features} />}
+      {s.kind === 'data-table' && <DataTable columns={s.columns} rows={s.rows} />}
+      {s.kind === 'code-cards' && <CodeCardGrid cards={s.cards} />}
+    </Section>
+  ))}
+
+  <Section id="links" title="Links">
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          class="rounded-2xl border border-edge-subtle bg-surface p-6 hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+        >
+          <h3 class="text-lg font-semibold">{l.label}</h3>
+          <p class="mt-2 text-sm text-dim">{l.desc}</p>
+        </a>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

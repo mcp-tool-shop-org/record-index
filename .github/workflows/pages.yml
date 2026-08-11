@@ -1,0 +1,64 @@
+# Deploys site/ to GitHub Pages. Adapted from armature's pages.yml, which was
+# itself taken verbatim from facet's — the org pattern, not a fresh authoring.
+#
+# ⚠ WHY A THIRD WORKFLOW FILE EXISTS HERE, since the studio rule caps a repo at
+# two: the cap's stated purpose is CI-minute control and its worked example is
+# ci + publish — it does not contemplate a Pages deploy. Measured at armature's
+# ruling time: of 89 repos in this org, 71 have Pages and ALL 71 use build_type
+# "workflow". facet runs exactly ci.yml + pages.yml + release.yml, and so does
+# armature. A rule that every deploying repo in the org breaks is mis-scoped.
+#
+# `release.yml` is NOT available for this job: its filename is authenticated by
+# PyPI's Trusted Publisher OIDC configuration and cannot be repurposed.
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # `npm ci`, not `npm install`: the lockfile is committed, so the build
+      # that runs here is the build verified on the rig.
+      - name: install site dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: build site
+        working-directory: site
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
