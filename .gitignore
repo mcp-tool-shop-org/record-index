@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# derived indexes and their determinism temps — never committed from here;
+# a record repo commits its own db + certificate pair, this repo builds neither
+*.db
+*.db.det_a.*
+*.db.det_b.*
+*.cert.json
+
+# test / tooling
+.pytest_cache/
+.coverage
+htmlcov/
