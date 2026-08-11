@@ -1,8 +1,20 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mcp-tool-shop-org/record-index/main/docs/assets/logo.png" alt="record-index" width="360">
+</p>
+
 # record-index
+
+<p align="center">
+  <a href="https://github.com/mcp-tool-shop-org/record-index/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/record-index/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
+  <a href="https://mcp-tool-shop-org.github.io/record-index/"><img src="https://img.shields.io/badge/landing%20page-live-2ea043" alt="Landing page"></a>
+</p>
 
 A governed SQLite+FTS5 map over a markdown decision record, so a session can **query**
 the record instead of reading it — and then read the forty lines the query pointed at
 rather than the six hundred it would have skimmed.
+
+**[Landing page & handbook →](https://mcp-tool-shop-org.github.io/record-index/)**
 
 The markdown stays canonical. The index is derived, regenerated on every fold, gated by a
 four-leg `verify`, and **wrong by definition the day it is hand-edited**.
