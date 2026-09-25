@@ -1,0 +1,1382 @@
+{
+  "boundaries": [
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
+          "hash": "9fac7f07abf151d9b42bcbeed860cb26fcc56b771c9590c418b5adc047dd620b",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "hash": "fe0db2631844cbdbbc479391535c2bba2bd9a37ed98563fee931a1a56111bc40",
+          "path": ".github/workflows/pages.yml"
+        },
+        {
+          "hash": "07fe913c9c9ac1716e2290cb3fe27cdfd33a5c36b53180b6326e8d0c99bb447e",
+          "path": ".github/workflows/release.yml"
+        }
+      ],
+      "globs": [
+        ".github/**"
+      ],
+      "importConfidence": "full",
+      "name": ".github",
+      "origin": "authored",
+      "role": "config",
+      "testedBy": 0,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
+          "hash": "47b6d8dbe72337356ea8a2b825ad761ca6d91cc021fee806ee29f44656db1d5a",
+          "path": "docs/assets/logo-alt.png"
+        },
+        {
+          "hash": "5688eea4e60be99ad8d1ddcbf6528392b6c0cf6db03e3d08d76f1eed7c270a9e",
+          "path": "docs/assets/logo-wide.png"
+        },
+        {
+          "hash": "8940e645816b607fe694237cabfae041ea831f12f9ab5bc9751e6ad64eae3a47",
+          "path": "docs/assets/logo.png"
+        }
+      ],
+      "globs": [
+        "docs/**"
+      ],
+      "importConfidence": "full",
+      "name": "docs",
+      "origin": "authored",
+      "role": "data",
+      "testedBy": 0,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 4,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 1,
+      "entryPoints": [
+        "record_index/index.py"
+      ],
+      "externals": 0,
+      "files": [
+        {
+          "exports": [
+            "bind",
+            "is_record_root",
+            "resolve_root"
+          ],
+          "hash": "31975f7550440072adcab7fb897c838aff40bc4539552e278c307f1e248a98f8",
+          "importsFiles": [
+            "record_index/conventions.py",
+            "record_index/mechanism.py",
+            "record_index/parse.py"
+          ],
+          "path": "record_index/__init__.py"
+        },
+        {
+          "exports": [
+            "build_and_certify",
+            "cert_path",
+            "corpus_id",
+            "corpus_manifest",
+            "health"
+          ],
+          "hash": "6635e94204daa9cf5c8a5c5029bd1a2a02242047f98def0e35b3258633780761",
+          "importsFiles": [
+            "record_index/index.py"
+          ],
+          "path": "record_index/certificate.py"
+        },
+        {
+          "exports": [
+            "claims",
+            "classify_document",
+            "measurements"
+          ],
+          "hash": "01578bbd6d84e079756e824f744e99b9dbb52e3cec43b8d3f832abe032380575",
+          "importsFiles": [
+            "record_index/__init__.py"
+          ],
+          "path": "record_index/claims.py"
+        },
+        {
+          "exports": [
+            "debug_requested",
+            "main",
+            "prog_name",
+            "run_contract",
+            "user_error"
+          ],
+          "hash": "3a35a08cd8259767510446e6e7d5489664fa1788f8d95f0d13b93ec4ef3af2f3",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/index.py",
+            "record_index/text.py"
+          ],
+          "path": "record_index/cli.py"
+        },
+        {
+          "exports": [
+            "load"
+          ],
+          "hash": "dc6ba14b62839435305f6a00c01ee7e3f03c56f9e2d2ce1d9d319c12237ec3ff",
+          "path": "record_index/conventions.py"
+        },
+        {
+          "exports": [
+            "build",
+            "query",
+            "survivable_stdout",
+            "verify"
+          ],
+          "hash": "5a4a778637bc18146c226369c87079b0848998044975a40125fb5963238d4584",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/mechanism.py",
+            "record_index/parse.py"
+          ],
+          "path": "record_index/index.py"
+        },
+        {
+          "hash": "a7135f73a6760b0fb99a0c1e3b0d393cb40a9ebe1635e244fb7b58b684c7776f",
+          "path": "record_index/mechanism.py"
+        },
+        {
+          "hash": "38a1fee1dbaef6f31c4f2d704672912b7f1026f1b72c5c5b98d179144162fc4d",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/mechanism.py",
+            "record_index/vocab.py"
+          ],
+          "path": "record_index/parse.py"
+        },
+        {
+          "exports": [
+            "artifact_pattern",
+            "bold_lead_title",
+            "find_date",
+            "fts_or",
+            "fts_terms",
+            "github_slug",
+            "list_items",
+            "one_line",
+            "paragraphs",
+            "strip_md",
+            "supersede_patterns"
+          ],
+          "hash": "d2d3cd0adbd05e5e20d0ecfee0d8c6e46b4ea14a39d59228ae619c7f1d36bff8",
+          "importsFiles": [
+            "record_index/mechanism.py"
+          ],
+          "path": "record_index/text.py"
+        },
+        {
+          "hash": "915905c73bb4066e6ac01b1c59bae415b83e547f52415eb62c35593def4617d8",
+          "path": "record_index/vocab.py"
+        }
+      ],
+      "globs": [
+        "record_index/**"
+      ],
+      "importConfidence": "full",
+      "name": "record_index",
+      "origin": "authored",
+      "role": "code",
+      "testedBy": 16,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
+          "hash": "15c7c180d91bfafe348c586c17a90274d7ceaba2511bf2a5f6ace29053959bb4",
+          "path": ".gitignore"
+        },
+        {
+          "hash": "ccab2eb175d4969477ad816ec6f6a9eb472776410ea6236ad587dc34c64d4c19",
+          "path": "CHANGELOG.md"
+        },
+        {
+          "hash": "367e5141e4f5884e5791c4021f33a9faa958840a5decf44e1b273a87aad1c459",
+          "path": "LICENSE"
+        },
+        {
+          "hash": "fa623a6822fe3ae911ca2803ecf4356437a7f6cd8dd1f27c8c1582dad765bde3",
+          "path": "README.es.md"
+        },
+        {
+          "hash": "185d78e71a5a786036fa8f75cfcfb7bf853278da9dcef5c2d0e4f9f54ab53291",
+          "path": "README.fr.md"
+        },
+        {
+          "hash": "6ed97bd3993f4b1f0331100b059d4840588ea405e23add3cad7a409de06863a1",
+          "path": "README.hi.md"
+        },
+        {
+          "hash": "6e54f27c5a2859610e60d91903ee793a3ec6e45f05ed863f8dc55f9cc199019b",
+          "path": "README.it.md"
+        },
+        {
+          "hash": "aed0cb5b28ff8b66700842738430e73a4942198d0f0c9a9426b776d90f9568f9",
+          "path": "README.ja.md"
+        },
+        {
+          "hash": "f6ae018d7c03ee7e7f2057197d69a270611ca15a9688f2b6a1c8c049043a270a",
+          "path": "README.md"
+        },
+        {
+          "hash": "435525b87e29eff66a8f097c55fa553a4ab0cfd991fa687c3514b7d53e17ade4",
+          "path": "README.pt-BR.md"
+        },
+        {
+          "hash": "3cf1d5d6aef5e833ed3f8759aaeec6c29eca2478a4b3ba47b0fa18762b5bc60a",
+          "path": "README.zh.md"
+        },
+        {
+          "hash": "a60e3e32d2462484b91ce9d65919414a0f67c7f76a885b892922c4ea85dfb5ff",
+          "path": "SECURITY.md"
+        },
+        {
+          "hash": "bb660df45c412bfc86a63a80704c00e513cdaad400b66fc23c2c6770eb814101",
+          "path": "pyproject.toml"
+        }
+      ],
+      "globs": [
+        "*"
+      ],
+      "importConfidence": "full",
+      "name": "root",
+      "origin": "authored",
+      "role": "config",
+      "testedBy": 0,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
+          "hash": "4a0409e9ae0c4056ac1157e4a86feaa5210e038640094b5d69b5a8b42d5adab6",
+          "path": "site/astro.config.mjs"
+        },
+        {
+          "hash": "076d274bbd21ea581efa6500e33f8ff883c86595f47a959073e135268514500b",
+          "path": "site/package-lock.json"
+        },
+        {
+          "hash": "0bb6b6c4b0e18800422ce781e5c7194d29a1cd8c8d892dcdf9fae5681f207cb5",
+          "path": "site/package.json"
+        },
+        {
+          "hash": "148fa5a24c329ea0ad6638c1e15934397909d65aa115b8934a0bf1c9f44c727a",
+          "path": "site/public/favicon.svg"
+        },
+        {
+          "constantOnly": true,
+          "hash": "ee756dfba4122d2acc94a39b2555d9f200fff56a87a8c0b10f9cd01df26a8b62",
+          "path": "site/src/content.config.ts"
+        },
+        {
+          "hash": "32674d8d6877d3a94783942df92c10341ccf979a45be6099c62198edff04edd8",
+          "path": "site/src/content/docs/handbook/conventions.md"
+        },
+        {
+          "hash": "0eb724828b07dd40de6b937d9a4de312b8a0d254c535a5d5e49a313b799cf454",
+          "path": "site/src/content/docs/handbook/getting-started.md"
+        },
+        {
+          "hash": "15dad4a9ad90da0902f578ca15fb1e2ef2e80b3acf06d6e4472e575e8be982d7",
+          "path": "site/src/content/docs/handbook/index.md"
+        },
+        {
+          "hash": "cc1bdb366ba2744d5772ee5e7614b2bd12c8c8370c64025a608424a46d239bd1",
+          "path": "site/src/content/docs/handbook/known-defects.md"
+        },
+        {
+          "hash": "16d3bdca4a9802983db87086553ff10c5fbc602aa23be8fd771e135c3af489a0",
+          "path": "site/src/content/docs/handbook/verify-and-certificate.md"
+        },
+        {
+          "hash": "6bc53d351f60ad74390521934d7217e10131e87f0827e98d065d191471b7709f",
+          "path": "site/src/pages/index.astro"
+        },
+        {
+          "hash": "1fb03e239220b54c1abb22875ab3f3a3310acdb6b7fc3ceb2f76f98134cddf1c",
+          "path": "site/src/site-config.ts"
+        },
+        {
+          "hash": "020ce7a18e9400e5334f7897e39854370300d7ff5e07649450edb49b7508afeb",
+          "path": "site/src/styles/global.css"
+        },
+        {
+          "hash": "22520d59e1e810ab94bc6466ed89d294fbe63f99db6f23037f411dfcd141482e",
+          "path": "site/src/styles/starlight-custom.css"
+        },
+        {
+          "hash": "b5b0a5b04a14cddd7713c5e1c82e86c79c17c2f86b170e26e9b170b3d5e01cd9",
+          "path": "site/tsconfig.json"
+        }
+      ],
+      "globs": [
+        "site/**"
+      ],
+      "importConfidence": "full",
+      "name": "site",
+      "origin": "authored",
+      "role": "site",
+      "testedBy": 0,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
+          "exports": [
+            "adapter",
+            "alpha",
+            "alpha_conv",
+            "alpha_db",
+            "beta",
+            "beta_conv",
+            "beta_db",
+            "copy_fixture",
+            "tree_hashes",
+            "write_adapter"
+          ],
+          "hash": "99ff420703d31215b181fe708e920396f45b8b2e526921d657914bf45a534289",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py"
+          ],
+          "path": "tests/conftest.py"
+        },
+        {
+          "hash": "668fbf0d565d8fe0e087f3641b687b811025e28a2a7f422508046333542fb5a2",
+          "path": "tests/fixtures/alpha/CHANGELOG.md"
+        },
+        {
+          "hash": "d240633a4c159f69edb2b1b5dcb19ca5cfdc6253e9a666def981ea7bf4508b95",
+          "path": "tests/fixtures/alpha/CLAUDE.md"
+        },
+        {
+          "hash": "f09e838dca5cee4f0cbd04f27ec1912e6d84fd6ec5cdf01ebf99f529e552aa11",
+          "path": "tests/fixtures/alpha/OVERVIEW.md"
+        },
+        {
+          "hash": "0a045eb5a536f87267f349d5a68b1afaeb8256d541475a97a260d5fbd74bf648",
+          "path": "tests/fixtures/alpha/docs/experiments/E01-executor-kickoff.md"
+        },
+        {
+          "hash": "ce32553124266de782fb76bdca8aff12354402000b61cb1fee5cc926b2da3085",
+          "path": "tests/fixtures/alpha/docs/experiments/E01-ruling.md"
+        },
+        {
+          "hash": "65c077e564a928d88f78e69abf971cec4ada2bf799528ea751b8b89c4f843486",
+          "path": "tests/fixtures/alpha/docs/experiments/E01-spec.md"
+        },
+        {
+          "hash": "d00b71af947ec84386db2179f8dc1ab168f54a3cb77c405885caedd7c1109bb0",
+          "path": "tests/fixtures/alpha/docs/experiments/E02-offsurface-ruling.md"
+        },
+        {
+          "hash": "ee9dae193329b4e1b2053aba33820b6994cbabdfb66fdfb0e2fb61138cef4700",
+          "path": "tests/fixtures/alpha/docs/experiments/E02-report.md"
+        },
+        {
+          "hash": "dcbe7f85b377d41d717e4cfd767d4f750ca2584b46cf30de7d86673979df9047",
+          "path": "tests/fixtures/alpha/docs/experiments/E02-ruling.md"
+        },
+        {
+          "hash": "94a5fb063fc2a196e0b5d92c393504430c12115041424d149e7887440f2eb52b",
+          "path": "tests/fixtures/alpha/docs/experiments/INDEX.md"
+        },
+        {
+          "hash": "8a4d733940a69f1a3597422d20830bc0ea4b1fd17ce17d42184afd3637c86948",
+          "path": "tests/fixtures/alpha/docs/handbook/index.md"
+        },
+        {
+          "hash": "2117b184ea8d060b29a54b189b85e2c930a072ced9fde1d66cf4f5bf76227ef8",
+          "path": "tests/fixtures/alpha/docs/index/conventions.json"
+        },
+        {
+          "hash": "d3ccf37bce58f183fe6a66331052301c0826e14d5d9d0329698bf196ab7e7cfa",
+          "path": "tests/fixtures/alpha/profiles/character.json"
+        },
+        {
+          "hash": "d7502861d78314eb7dd8ad662c54be4cecc9a23b23d8b0b40f19c5036141e869",
+          "path": "tests/fixtures/beta/LAWS.md"
+        },
+        {
+          "hash": "8d45c6caf88c0b45a710da3210675234703d9057a78bf4b93d79feb16e1e98d8",
+          "path": "tests/fixtures/beta/OVERVIEW.md"
+        },
+        {
+          "hash": "2305e3fc3e3ad60757cc8d80f4b519b826cdb5cf978fde4af858798a27a2c60b",
+          "path": "tests/fixtures/beta/index/conventions.json"
+        },
+        {
+          "hash": "9e9dbefc385a740b946d052ed543335b251398f2ec42358d891b133707c676eb",
+          "path": "tests/fixtures/beta/live/status.md"
+        },
+        {
+          "hash": "98dc66eb32296ca69fe4249cc1a34d18f6f93fb2d255cdcb6148cae7125c80da",
+          "path": "tests/fixtures/beta/loose/stray.md"
+        },
+        {
+          "hash": "4a151965ebbebedc9f9294155071b09090366b6dd0eab5c87fd011068437dfe9",
+          "path": "tests/fixtures/beta/record/arcs/A01-decision.md"
+        },
+        {
+          "hash": "ddf5b73b026d2c901b7f8129a2634f97c64c5db9e647e26e9fe0c3c8f7ccb826",
+          "path": "tests/fixtures/beta/record/arcs/A02-decision.md"
+        },
+        {
+          "hash": "5d86c6ab63d95e2dfffaf4e74012673739c7844b49a11f9b6b89278583a59e20",
+          "path": "tests/fixtures/beta/record/arcs/A02-report.md"
+        },
+        {
+          "exports": [
+            "test_a_directory_carrying_every_marker_is_the_record",
+            "test_a_marker_path_with_a_separator_is_resolved_per_platform",
+            "test_a_resolved_root_with_no_declaration_refuses_at_bind_time",
+            "test_an_empty_path_is_not_a_record_root",
+            "test_bind_accepts_an_explicit_root",
+            "test_bind_carries_a_mechanism_through",
+            "test_bind_reads_the_declaration_from_the_declared_location",
+            "test_bind_resolves_a_checkout_from_an_adapters_own_file",
+            "test_bind_with_no_corpus_returns_a_binding_rather_than_raising",
+            "test_both_surfaces_carry_every_exit_code",
+            "test_db_default_is_the_declared_path_under_the_root",
+            "test_each_repo_has_its_own_default_and_its_own_env_var",
+            "test_one_marker_is_not_enough",
+            "test_resolve_falls_through_to_the_working_directory",
+            "test_resolve_refuses_rather_than_returning_a_plausible_path",
+            "test_resolve_takes_the_first_candidate_that_holds",
+            "test_set_root_provider_returns_the_binding_for_chaining",
+            "test_the_bound_surface_carries_the_declared_patterns",
+            "test_the_exported_readers_reach_this_repos_files",
+            "test_the_exported_surface_is_named_explicitly_and_not_swept",
+            "test_the_exported_verbs_are_bound_to_this_binding",
+            "test_the_markers_are_declared_so_the_two_repos_disagree",
+            "test_the_package_declares_a_version",
+            "test_the_record_follows_the_provider",
+            "test_the_root_is_read_through_the_provider_on_every_access",
+            "test_the_two_repos_export_different_declared_patterns",
+            "test_the_unbound_declaration_refuses_every_field_about_a_document",
+            "test_the_unbound_surface_is_the_command_half_only",
+            "test_there_is_no_walk_up_from_the_working_directory"
+          ],
+          "hash": "db855e15e50074660524949a15825889f058a7082d765a4661c856d0d1d416c3",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/mechanism.py"
+          ],
+          "path": "tests/test_binding.py"
+        },
+        {
+          "exports": [
+            "staged",
+            "test_a_certificate_beside_a_different_index_is_detected",
+            "test_a_certificate_missing_a_required_key_does_not_serve",
+            "test_a_certificate_that_is_not_an_object_does_not_serve",
+            "test_a_certified_index_serves",
+            "test_a_corpus_that_fails_verify_certifies_as_failed",
+            "test_a_failed_verify_does_not_serve",
+            "test_a_moved_corpus_is_stale_and_still_serves",
+            "test_a_new_document_makes_the_index_stale_too",
+            "test_an_index_with_no_certificate_never_serves",
+            "test_an_unknown_certificate_schema_does_not_serve",
+            "test_an_unreadable_certificate_does_not_serve",
+            "test_an_untouched_corpus_is_not_stale",
+            "test_build_and_certify_writes_the_pair_and_returns_the_document",
+            "test_certifying_still_prints_the_transcript",
+            "test_no_index_is_index_missing",
+            "test_staleness_names_what_moved",
+            "test_the_certificate_carries_the_size_and_digest_of_the_db_beside_it",
+            "test_the_certificate_carries_the_whole_verify_transcript",
+            "test_the_certificate_path_is_the_db_path_plus_the_suffix",
+            "test_the_pre_extraction_schema_id_is_still_accepted_on_read",
+            "test_the_second_corpus_serves_too",
+            "test_the_tee_restores_stdout_even_when_verify_raises",
+            "test_the_writer_emits_exactly_one_schema_id",
+            "test_there_is_no_path_that_writes_a_db_without_a_certificate_for_it"
+          ],
+          "hash": "2b10ac5992034a8b0bbbd6e3e50cd2c459c33683760e14adaf4d9608a0593275",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py"
+          ],
+          "path": "tests/test_certificate.py"
+        },
+        {
+          "exports": [
+            "test_a_bannered_document_splits_at_its_banner",
+            "test_a_bannered_document_with_no_banner_is_all_current_state",
+            "test_a_claim_on_a_line_naming_no_arc_is_unparseable",
+            "test_a_count_claim_no_family_parses_is_reported_not_guessed_at",
+            "test_a_current_state_directory_reaches_stale_through_the_other_branch",
+            "test_a_current_state_document_disagreeing_with_the_record_is_stale",
+            "test_a_document_on_neither_list_is_reported_and_not_assigned",
+            "test_a_document_the_declaration_excludes_contributes_nothing",
+            "test_a_historical_document_disagreeing_is_as_of_writing_and_not_stale",
+            "test_a_matching_count_in_a_current_state_document_is_ok",
+            "test_a_modifier_makes_an_assertion_ambiguous_rather_than_resolved",
+            "test_a_range_that_does_not_start_at_one_is_not_a_count_claim",
+            "test_a_repo_whose_arcs_are_not_e_numbered_can_still_attribute_a_claim",
+            "test_betas_own_phrasing_family_finds_betas_own_sites",
+            "test_claim_shaped_is_case_insensitive",
+            "test_removing_the_exclusion_makes_the_same_line_appear",
+            "test_the_arc_pattern_is_the_e_form_and_beta_pays_for_it",
+            "test_the_arc_pattern_needs_exactly_two_digits",
+            "test_the_changelog_splits_at_its_first_release",
+            "test_the_families_are_the_repos_own_and_absent_ones_are_named",
+            "test_the_sweep_exits_zero_on_a_record_with_nothing_to_say",
+            "test_the_sweep_exits_zero_with_stale_rows_on_the_record",
+            "test_the_sweep_reads_the_index_rather_than_re_deriving_the_record",
+            "test_the_two_repos_classify_the_same_path_differently"
+          ],
+          "hash": "33dfb81cfd8763f6dbbfebaf16313985775dd8edd700d4ca5278579cea442ef2",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/parse.py"
+          ],
+          "path": "tests/test_claims.py"
+        },
+        {
+          "exports": [
+            "run",
+            "test_a_corpus_verb_with_no_corpus_refuses_rather_than_breaking",
+            "test_a_declaration_error_is_refused_and_says_where_to_fix_it",
+            "test_a_failing_verify_exits_refused_through_a_subprocess",
+            "test_a_fired_gate_is_refused_and_named_as_a_gate",
+            "test_a_mistyped_flag_exits_one_through_a_subprocess",
+            "test_a_rootless_binding_on_a_db_verb_refuses_rather_than_erroring",
+            "test_a_systemexit_passes_straight_through",
+            "test_an_explicit_db_wins_over_the_env_var",
+            "test_an_installed_copy_with_no_corpus_still_answers_help",
+            "test_an_installed_copy_with_no_corpus_still_queries_an_explicit_db",
+            "test_an_interrupt_is_a_runtime_error_and_not_a_refusal",
+            "test_an_unexpected_break_exits_runtime_through_a_subprocess",
+            "test_an_unexpected_exception_is_a_runtime_error_and_offers_the_traceback",
+            "test_an_unknown_flag_is_a_user_error",
+            "test_an_unknown_verb_is_a_user_error",
+            "test_an_unresolved_root_is_refused_and_names_the_env_var",
+            "test_build_exits_ok_and_writes_the_index",
+            "test_claims_returns_zero_whatever_it_finds",
+            "test_debug_adds_the_traceback_and_changes_nothing_else",
+            "test_debug_is_read_from_argv_and_not_from_a_parse",
+            "test_debug_prints_a_traceback_through_a_subprocess",
+            "test_help_exits_zero_through_a_subprocess",
+            "test_help_reaches_the_operator_through_a_success_code",
+            "test_prog_name_follows_the_runtime",
+            "test_q_prints_rows_and_exits_ok",
+            "test_q_restricts_to_one_table_when_asked",
+            "test_q_says_so_rather_than_printing_nothing",
+            "test_q_with_no_term_is_a_user_error_with_a_usage_hint",
+            "test_the_env_var_wins_over_the_records_own_index",
+            "test_the_four_classes_return_four_different_codes",
+            "test_the_help_text_names_the_repo_and_its_env_var",
+            "test_the_installed_shape_builds_verifies_and_queries",
+            "test_the_records_own_index_is_the_last_resort",
+            "test_the_second_repos_adapter_works_the_same_way",
+            "test_verify_returns_the_verify_verbs_own_code"
+          ],
+          "hash": "24ed57aaf2d4a85726d2d0ed1e852efca2ce1e46c19fc27b853f73bfc3d76b11",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/index.py",
+            "tests/conftest.py"
+          ],
+          "path": "tests/test_cli.py"
+        },
+        {
+          "exports": [
+            "alpha_doc",
+            "beta_doc",
+            "test_a_bare_seeded_target_stays_a_bare_pair",
+            "test_a_declaration_that_is_not_an_object_refuses_by_type",
+            "test_a_field_that_may_be_empty_loads_when_declared_empty",
+            "test_a_field_that_may_not_be_empty_refuses_when_declared_empty",
+            "test_a_missing_declaration_refuses_and_names_the_path",
+            "test_a_missing_schema_key_refuses",
+            "test_a_multi_target_seed_stays_a_list_of_pairs",
+            "test_a_repo_with_no_current_state_directory_can_declare_that",
+            "test_a_seeded_target_that_is_not_a_pair_refuses_and_names_the_question",
+            "test_a_wrong_schema_id_refuses_and_names_both",
+            "test_alphas_ruling_arc_strips_from_the_keyword",
+            "test_an_arc_rule_naming_no_known_form_refuses",
+            "test_an_empty_ruling_header_list_refuses",
+            "test_betas_ruling_arc_takes_the_leading_token",
+            "test_both_fixture_declarations_load",
+            "test_every_required_field_refuses_when_it_is_not_declared",
+            "test_the_experiment_key_is_the_prefix_and_is_none_when_absent",
+            "test_the_kickoff_rule_is_deliberately_the_other_one",
+            "test_the_named_ruling_header_refusal_is_reached_only_by_a_non_list_falsy",
+            "test_the_set_of_fields_that_refuse_emptiness_is_the_one_measured",
+            "test_the_source_path_is_carried_for_the_error_message",
+            "test_the_two_arc_rules_disagree_on_the_same_filename",
+            "test_the_two_declarations_agree_on_nothing_that_describes_a_document",
+            "test_the_underscore_prefixed_notes_are_ignored_by_the_loader",
+            "test_unreadable_json_refuses_as_a_conventions_error_not_a_valueerror"
+          ],
+          "hash": "cd64cfe995cd14015ae9c1b7cf13b93d78a86342d7e6040a0fd10daff2aa349f",
+          "importOrder": [
+            "tests/conftest.py",
+            "record_index/conventions.py"
+          ],
+          "importsFiles": [
+            "record_index/conventions.py",
+            "tests/conftest.py"
+          ],
+          "path": "tests/test_conventions.py"
+        },
+        {
+          "exports": [
+            "test_byte_identity_holds_on_this_platform",
+            "test_no_row_carries_a_timestamp_or_an_absolute_path",
+            "test_the_certificate_comparison_can_fail",
+            "test_the_corpus_id_is_order_independent_and_moves_when_a_file_moves",
+            "test_the_corpus_manifest_covers_every_markdown_file_the_index_reads",
+            "test_the_row_comparison_can_fail",
+            "test_the_second_corpus_is_deterministic_too",
+            "test_two_builds_produce_identical_dump_text",
+            "test_two_builds_produce_identical_row_sets",
+            "test_two_certifications_of_one_corpus_agree_on_every_field_but_the_clock"
+          ],
+          "hash": "2e8fd746fbac35873688d794b04e1a4303db71527873097e5e1185ef90e3ca33",
+          "importsFiles": [
+            "record_index/__init__.py"
+          ],
+          "path": "tests/test_determinism.py"
+        },
+        {
+          "exports": [
+            "andon_asserts",
+            "run",
+            "scan_writes",
+            "source_of",
+            "stray",
+            "test_a_read_only_module_mutates_nothing",
+            "test_a_whole_build_and_verify_touches_nothing_in_the_corpus",
+            "test_an_existing_index_survives_a_fired_gate",
+            "test_no_module_gates_with_a_bare_assert",
+            "test_only_the_three_declared_writers_write",
+            "test_run_contract_still_keys_on_assertionerror",
+            "test_the_andon_exception_type_census_is_the_one_measured",
+            "test_the_corpus_reader_opens_with_no_mode_at_all",
+            "test_the_discovery_gate_can_fail_in_every_interpreter_mode",
+            "test_the_discovery_gate_refuses_in_every_interpreter_mode",
+            "test_the_gate_precedes_the_irreversible_step",
+            "test_the_handler_order_check_can_fail",
+            "test_the_optimize_legs_are_not_vacuous",
+            "test_the_permitted_writers_are_actually_there",
+            "test_the_scanner_catches_a_corpus_write",
+            "test_the_scanner_does_not_fire_on_ordinary_builtins_or_on_reads",
+            "test_the_structural_check_can_fail"
+          ],
+          "hash": "6c383a43ea460a3732bb0df2241cd22dd468fd23eb8c001ad21aa89c0404f626",
+          "importOrder": [
+            "tests/conftest.py",
+            "record_index/index.py"
+          ],
+          "importsFiles": [
+            "record_index/index.py",
+            "tests/conftest.py"
+          ],
+          "path": "tests/test_gates_and_writes.py"
+        },
+        {
+          "exports": [
+            "test_a_build_creates_its_own_output_directory",
+            "test_a_build_replaces_the_previous_database_rather_than_adding_to_it",
+            "test_a_quiet_build_prints_nothing_and_a_loud_one_prints_the_counts",
+            "test_alphas_build_returns_the_hand_derived_counts",
+            "test_betas_build_returns_its_own_counts_which_are_not_alphas",
+            "test_every_row_carries_a_file_an_anchor_a_locator_and_a_line",
+            "test_experiment_is_a_column_and_not_part_of_any_key",
+            "test_no_two_exit_codes_collide",
+            "test_only_the_two_title_columns_are_indexed",
+            "test_sequence_gaps_finds_a_hole_and_is_silent_on_a_complete_run",
+            "test_sequence_numbers_ignores_a_lettered_number",
+            "test_sequence_numbers_reads_plain_and_amendment_numbering",
+            "test_survivable_stdout_is_safe_to_call_on_a_stream_that_cannot_reconfigure",
+            "test_the_counts_returned_match_the_rows_written",
+            "test_the_declared_empty_corpora_are_empty_tables_and_not_missing_ones",
+            "test_the_exit_codes_are_the_declared_contract",
+            "test_the_fts_row_count_is_every_structured_row_plus_the_prose",
+            "test_the_fts_table_uses_the_declared_tokenizer",
+            "test_the_rulings_primary_key_is_arc_number_kind",
+            "test_the_search_title_and_the_displayed_title_are_separate_surfaces"
+          ],
+          "hash": "9671041c013cb7ebd5ff26204bcf68a9337e1920726a411baf7c538b87753ec6",
+          "importsFiles": [
+            "record_index/__init__.py"
+          ],
+          "path": "tests/test_index_build.py"
+        },
+        {
+          "exports": [
+            "test_a_lower_case_name_is_refused_even_when_the_attribute_exists",
+            "test_an_overridden_mechanism_reports_its_own_values_in_the_note",
+            "test_an_override_replaces_one_value_and_leaves_the_rest",
+            "test_an_unknown_override_refuses_and_says_where_the_value_belongs",
+            "test_every_tuning_value_is_overridable",
+            "test_several_unknown_overrides_are_all_named_not_just_the_first",
+            "test_the_calibration_note_carries_the_corpus_and_the_numbers_it_quotes",
+            "test_the_default_is_a_mechanism_with_the_class_values",
+            "test_the_title_weight_outranks_the_body_weight"
+          ],
+          "hash": "38dd5031976a2dbbaeaf4e9a2218da23c01d27abfdade4915618c56cc973d088",
+          "importsFiles": [
+            "record_index/mechanism.py"
+          ],
+          "path": "tests/test_mechanism.py"
+        },
+        {
+          "exports": [
+            "project",
+            "test_every_import_the_package_makes_resolves_without_installing_anything",
+            "test_every_module_compiles",
+            "test_every_module_on_disk_ships",
+            "test_no_module_imports_anything_outside_the_standard_library",
+            "test_the_classifiers_name_the_versions_the_floor_admits",
+            "test_the_declared_python_floor_is_the_one_this_suite_targets",
+            "test_the_declared_version_and_the_package_version_agree",
+            "test_the_license_is_declared_and_the_file_is_there",
+            "test_the_package_is_the_one_declared_for_distribution",
+            "test_the_runtime_dependency_list_is_empty",
+            "test_this_interpreter_is_at_or_above_the_declared_floor"
+          ],
+          "hash": "c58d39aa6916001b8c7b12575c9c87b2e846eb279022b7617d8aa27ead910cc8",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "tests/conftest.py"
+          ],
+          "path": "tests/test_packaging.py"
+        },
+        {
+          "exports": [
+            "test_a_complete_extension_map_drops_nothing_and_the_counter_reads_zero",
+            "test_a_correction_naming_a_number_in_another_arc_is_not_linked",
+            "test_a_declared_corpus_that_is_absent_is_reported_and_not_raised_on",
+            "test_a_declared_sub_ruling_marker_produces_a_findable_locator",
+            "test_a_document_matching_neither_pattern_is_discovered_by_neither",
+            "test_a_file_a_structured_table_owns_is_not_also_indexed_as_prose",
+            "test_a_handoff_header_the_glob_cannot_reach_raises_an_andon",
+            "test_a_handoff_section_is_owned_and_its_document_still_yields_prose",
+            "test_a_lettered_marker_numbered_for_another_ruling_is_a_cross_reference",
+            "test_a_numbered_bold_item_is_a_rule_and_a_bulleted_one_is_a_law",
+            "test_a_parent_does_not_re_index_its_own_sub_rulings_prose",
+            "test_a_phenomenon_is_found_by_a_declared_naming_verb",
+            "test_a_profiles_registry_is_indexed_not_re_derived",
+            "test_a_repo_declaring_no_attribution_pattern_creates_no_such_vocabulary",
+            "test_a_repo_declaring_no_markers_gets_no_phenomena_and_no_counter",
+            "test_a_repo_declaring_no_profiles_gets_zero_rows_and_no_error",
+            "test_a_repo_with_no_experiments_table_takes_its_rows_from_disk",
+            "test_a_ruling_never_supersedes_itself",
+            "test_a_section_shorter_than_the_minimum_is_not_indexed_on_its_own",
+            "test_a_status_carrying_no_declared_word_is_counted_not_filed",
+            "test_a_status_label_is_read_only_from_the_head_of_the_prose",
+            "test_a_sub_ruling_takes_its_parents_date_when_it_carries_none",
+            "test_a_sub_rulings_locator_is_findable_in_its_own_file",
+            "test_a_verdict_needs_word_boundaries",
+            "test_alpha_discovers_three_ruling_documents_and_one_kickoff",
+            "test_alpha_has_no_unrecognised_ruling_headers",
+            "test_alphas_audit_finds_one_thing_and_it_is_the_absent_declaration",
+            "test_alphas_eleven_rulings_are_exactly_these",
+            "test_alphas_law_book_yields_all_three_forms",
+            "test_an_explicit_correction_links_both_directions",
+            "test_an_extension_the_declaration_does_not_carry_is_dropped_and_counted",
+            "test_an_undeclared_corpus_that_is_present_is_reported_too",
+            "test_arc_is_identity_and_experiment_is_grouping",
+            "test_artifacts_are_extracted_by_path_shape_with_a_locality_heuristic",
+            "test_authority_is_the_declared_word_and_defaults_to_the_declared_default",
+            "test_beta_counts_the_numbered_heading_no_declared_form_reads",
+            "test_beta_discovers_its_own_documents_and_zero_kickoffs",
+            "test_beta_merges_two_declared_header_forms_in_one_document",
+            "test_capitals_carry_the_verdict_and_lower_case_does_not",
+            "test_each_call_to_record_hands_back_a_fresh_one",
+            "test_handoffs_carry_their_commits_dates_and_superseded_flag",
+            "test_one_record_used_twice_accumulates_and_that_is_why_it_is_per_build",
+            "test_prose_sections_come_out_in_file_then_line_order",
+            "test_the_attribution_pattern_is_the_repos_own_and_the_gap_is_counted",
+            "test_the_closure_marker_is_a_different_kind_from_a_sub_ruling",
+            "test_the_inverse_guard_is_silent_on_a_clean_tree",
+            "test_the_leading_prefix_rule_really_does_collide_on_this_corpus",
+            "test_the_residual_population_excludes_what_the_verdicts_already_claim",
+            "test_the_spec_fragments_are_patterns_and_are_the_repos_own",
+            "test_the_superseded_flag_is_read_from_the_header_line_only",
+            "test_the_table_is_the_authored_source_and_disk_supplements_it",
+            "test_the_two_e02_documents_do_not_collide",
+            "test_the_verdict_counter_names_the_shouted_verbs_nobody_declared"
+          ],
+          "hash": "433ed1af3af99038043eb9309288292f02aaee14a4ab834fbcb41f16dcfedb89",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/parse.py"
+          ],
+          "path": "tests/test_parse.py"
+        },
+        {
+          "exports": [
+            "con_a",
+            "con_b",
+            "keys",
+            "test_a_distinctive_phrase_returns_its_own_row_first",
+            "test_a_phrase_matching_nothing_returns_nothing",
+            "test_a_row_is_returned_once_even_when_both_stages_find_it",
+            "test_a_single_word_phrase_skips_the_adjacency_stage",
+            "test_coverage_scales_the_score_rather_than_replacing_it",
+            "test_query_falls_back_to_the_module_default_when_given_no_mechanism",
+            "test_the_bindings_query_carries_the_bindings_mechanism",
+            "test_the_candidate_window_bounds_the_relaxed_stage",
+            "test_the_exact_phrase_stage_keeps_stopwords_because_a_phrase_is_adjacency",
+            "test_the_limit_is_respected",
+            "test_the_phrase_stage_is_a_best_bet_slot_and_not_a_takeover",
+            "test_the_same_mechanism_works_on_the_second_corpus",
+            "test_the_same_query_returns_the_same_order_every_time",
+            "test_two_builds_of_one_corpus_rank_a_query_identically"
+          ],
+          "hash": "4a75c73d2bc27e9cbe2d5921ffb1d82aab8d4e8a2a35d4584b6a6f10e3f36b00",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/mechanism.py"
+          ],
+          "path": "tests/test_query.py"
+        },
+        {
+          "exports": [
+            "test_a_declared_verb_set_that_omits_a_verb_does_not_match_it",
+            "test_a_paragraph_not_opening_in_bold_is_not_a_title",
+            "test_a_run_of_bold_list_items_with_no_blank_lines_splits_into_items",
+            "test_a_shell_variable_prefix_is_not_swallowed_into_the_path",
+            "test_all_three_dashes_are_one_class",
+            "test_an_unclosed_bold_run_is_not_a_title",
+            "test_artifact_pattern_matches_only_declared_extensions",
+            "test_artifact_pattern_reads_a_windows_path",
+            "test_bold_lead_closes_across_wrapped_lines",
+            "test_find_date_returns_none_rather_than_guessing",
+            "test_find_date_takes_the_first_iso_date",
+            "test_fts_or_quotes_every_term",
+            "test_fts_terms_drops_stopwords_and_single_characters",
+            "test_fts_terms_never_returns_empty",
+            "test_github_slug_lowercases_strips_markup_and_hyphenates",
+            "test_one_line_at_exactly_the_limit_is_not_truncated",
+            "test_one_line_collapses_whitespace_and_trims_dots",
+            "test_one_line_takes_an_explicit_limit",
+            "test_one_line_truncates_at_the_limit_and_says_so",
+            "test_paragraphs_handles_leading_and_trailing_blanks",
+            "test_paragraphs_offsets_by_the_start_line",
+            "test_paragraphs_split_on_blank_lines_with_true_line_numbers",
+            "test_prose_that_merely_begins_with_a_marker_is_not_cut_into_phantom_laws",
+            "test_stopwords_are_ordinary_function_words_not_record_vocabulary",
+            "test_strip_md_leaves_a_bare_word_alone",
+            "test_strip_md_removes_markup_and_keeps_the_words",
+            "test_supersede_declines_to_guess_at_a_verb_nobody_declared",
+            "test_supersede_reads_an_explicit_verb_over_declared_verbs",
+            "test_the_extension_alternation_is_escaped",
+            "test_the_title_form_requires_adjacency"
+          ],
+          "hash": "55967ae2cbf34b2ef3e5f3b66ecc0ddfe8275f3780eeb4336ab7cba3051ddf66",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/mechanism.py"
+          ],
+          "path": "tests/test_text.py"
+        },
+        {
+          "exports": [
+            "test_a_binding_verifies_through_a_fresh_record_each_time",
+            "test_a_count_check_naming_an_absent_file_raises_rather_than_failing_a_leg",
+            "test_a_count_mismatch_fails_leg_two_and_refuses",
+            "test_a_declaration_finding_still_exits_zero",
+            "test_a_locator_that_no_longer_occurs_is_a_dangling_pointer",
+            "test_a_record_above_a_declared_bound_is_a_note_and_not_a_failure",
+            "test_a_row_from_a_file_the_glob_does_not_discover_fails",
+            "test_a_run_with_unrecognised_vocabulary_still_exits_zero",
+            "test_a_seed_with_no_anchor_matches_any_anchor_in_the_file",
+            "test_a_seeded_question_whose_target_is_unreachable_fails",
+            "test_a_sequence_gap_fails_and_names_the_missing_numbers",
+            "test_alpha_passes_all_four_legs",
+            "test_beta_passes_all_four_legs",
+            "test_leg_three_reports_zero_on_the_untouched_corpus",
+            "test_record_index_exposes_the_verify_verb_through_the_binding",
+            "test_the_determinism_leg_names_which_form_of_identity_held",
+            "test_the_determinism_temp_files_are_removed",
+            "test_the_diagnostics_are_printed_before_the_verdict_block",
+            "test_the_doubling_is_exactly_two_and_the_gates_are_untouched_by_it",
+            "test_the_last_non_empty_line_is_the_verdict",
+            "test_the_mechanism_calibration_rides_the_transcript",
+            "test_the_top_n_is_a_parameter_of_the_leg",
+            "test_the_transcript_reports_the_corpus_counts_not_twice_the_corpus_counts",
+            "test_the_verdict_is_the_last_line_on_a_failing_run_too",
+            "test_two_verifies_in_one_working_copy_do_not_collide",
+            "test_unexpected_handoff_coverage_fails",
+            "test_verify_builds_from_the_record_and_never_writes_the_index_it_checks",
+            "test_verify_closes_its_handle_so_a_build_can_follow_it"
+          ],
+          "hash": "0edfb2565e49f97dd71a88c75cdd685a29de4d5f9021aeb163d2bba46ddb5197",
+          "importsFiles": [
+            "record_index/__init__.py",
+            "record_index/conventions.py",
+            "record_index/parse.py"
+          ],
+          "path": "tests/test_verify.py"
+        },
+        {
+          "exports": [
+            "test_a_complete_vocabulary_reads_zero_and_an_incomplete_one_does_not",
+            "test_a_probe_bounds_the_population",
+            "test_a_repeated_token_is_named_once_and_counted_every_time",
+            "test_a_report_is_built_fresh_and_hands_back_the_same_vocabulary_by_name",
+            "test_a_report_iterates_in_sorted_name_order",
+            "test_an_unexercised_report_says_so_rather_than_printing_nothing",
+            "test_no_probe_matches_the_empty_string",
+            "test_phenomena_and_verdicts_share_the_announcing_form",
+            "test_the_announcing_probe_excludes_capitalised_prose",
+            "test_the_announcing_probe_requires_a_past_participle",
+            "test_the_artifact_probe_is_a_token_with_an_extension",
+            "test_the_first_site_of_a_token_is_the_one_kept",
+            "test_the_named_list_is_capped_and_says_that_it_was_capped",
+            "test_the_participle_rule_has_a_stated_blind_spot",
+            "test_the_report_says_report_only_on_its_own_face",
+            "test_the_ruling_header_probe_is_a_numbered_heading",
+            "test_total_is_the_sum_of_both_halves",
+            "test_total_unrecognised_sums_across_vocabularies",
+            "test_with_no_probe_everything_is_in_the_population"
+          ],
+          "hash": "76a7fe7e8997f40973015edf7862c52a180c057fbc03d7bc20d2c2800f3d42b6",
+          "importsFiles": [
+            "record_index/vocab.py"
+          ],
+          "path": "tests/test_vocab.py"
+        }
+      ],
+      "globs": [
+        "tests/**"
+      ],
+      "importConfidence": "full",
+      "name": "tests",
+      "origin": "authored",
+      "role": "test",
+      "testedBy": 0,
+      "unresolvedNamed": [
+        {
+          "path": "tests/test_packaging.py",
+          "specifier": null,
+          "why": "dynamic"
+        }
+      ],
+      "unresolvedSites": 1
+    }
+  ],
+  "doors": [
+    {
+      "checksCount": 0,
+      "commands": [
+        {
+          "job": "test",
+          "step": "Atlas check",
+          "text": "npx --yes @dogfood-lab/atlas@1.21.0 check"
+        },
+        {
+          "job": "test",
+          "step": "Install the package and the test runner",
+          "text": "python -m pip install --upgrade pip\npython -m pip install -e .\npython -m pip install pytest\n"
+        },
+        {
+          "job": "test",
+          "step": "Show what is installed",
+          "text": "python -m pip list"
+        },
+        {
+          "job": "test",
+          "step": "Run the suite",
+          "text": "python -m pytest tests -q"
+        }
+      ],
+      "elsewhere": [],
+      "file": ".github/workflows/ci.yml",
+      "landings": [],
+      "mentions": [],
+      "name": "CI",
+      "permissions": [],
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "tests",
+          "depth": 0,
+          "files": 16
+        },
+        {
+          "boundary": "record_index",
+          "depth": 1,
+          "enters": {
+            "file": "record_index/__init__.py",
+            "from": "tests/conftest.py"
+          },
+          "files": 6
+        }
+      ],
+      "readers": [],
+      "runs": [
+        {
+          "directory": true,
+          "job": "test",
+          "path": "tests/",
+          "runKind": "executes"
+        }
+      ],
+      "runsCount": 1,
+      "secrets": [],
+      "sends": {
+        "deploysPages": false,
+        "dispatchesTo": [],
+        "opensIssues": false,
+        "opensIssuesOnFailure": false,
+        "opensPullRequests": false,
+        "publishes": false,
+        "publishesTo": [],
+        "releases": false
+      },
+      "stages": [],
+      "triggers": [
+        {
+          "event": "pull_request",
+          "paths": [
+            ".github/workflows/**",
+            "atlas/**",
+            "pyproject.toml",
+            "record_index/**",
+            "tests/**"
+          ]
+        },
+        {
+          "event": "push",
+          "paths": [
+            ".github/workflows/**",
+            "atlas/**",
+            "pyproject.toml",
+            "record_index/**",
+            "tests/**"
+          ]
+        },
+        {
+          "event": "workflow_dispatch"
+        }
+      ],
+      "uses": [
+        "actions/checkout",
+        "actions/setup-node",
+        "actions/setup-python"
+      ],
+      "usesWorkflowToken": false
+    },
+    {
+      "checksCount": 0,
+      "commands": [
+        {
+          "job": "build",
+          "step": "install site dependencies",
+          "text": "npm ci"
+        },
+        {
+          "job": "build",
+          "step": "build site",
+          "text": "npm run build"
+        }
+      ],
+      "elsewhere": [],
+      "file": ".github/workflows/pages.yml",
+      "landings": [],
+      "mentions": [],
+      "name": "pages",
+      "permissions": [
+        "contents:read",
+        "id-token:write",
+        "pages:write"
+      ],
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "site",
+          "depth": 0,
+          "files": 3
+        }
+      ],
+      "readers": [],
+      "runs": [
+        {
+          "job": "build",
+          "matched": true,
+          "path": "site/astro.config.mjs",
+          "runKind": "executes",
+          "via": "astro build"
+        },
+        {
+          "directory": true,
+          "job": "build",
+          "matched": true,
+          "path": "site/src/",
+          "runKind": "executes",
+          "via": "astro build"
+        }
+      ],
+      "runsCount": 2,
+      "secrets": [],
+      "sends": {
+        "deploysPages": true,
+        "dispatchesTo": [],
+        "opensIssues": false,
+        "opensIssuesOnFailure": false,
+        "opensPullRequests": false,
+        "publishes": false,
+        "publishesTo": [],
+        "releases": false
+      },
+      "stages": [],
+      "triggers": [
+        {
+          "branches": [
+            "main"
+          ],
+          "event": "push",
+          "paths": [
+            ".github/workflows/pages.yml",
+            "site/**"
+          ]
+        },
+        {
+          "event": "workflow_dispatch"
+        }
+      ],
+      "uses": [
+        "actions/checkout",
+        "actions/deploy-pages",
+        "actions/setup-node",
+        "actions/upload-pages-artifact"
+      ],
+      "usesWorkflowToken": false
+    },
+    {
+      "checksCount": 1,
+      "commands": [
+        {
+          "job": "publish",
+          "step": "Build the sdist and the wheel",
+          "text": "python -m pip install --upgrade pip\npython -m pip install build\npython -m build\n"
+        },
+        {
+          "job": "publish",
+          "step": "What is about to be published",
+          "text": "ls -l dist/"
+        }
+      ],
+      "elsewhere": [],
+      "file": ".github/workflows/release.yml",
+      "landings": [],
+      "mentions": [],
+      "name": "Release",
+      "permissions": [
+        "contents:read",
+        "id-token:write"
+      ],
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "record_index",
+          "depth": 0,
+          "files": 10
+        }
+      ],
+      "readers": [],
+      "runs": [
+        {
+          "directory": true,
+          "job": "publish",
+          "path": "record_index/",
+          "runKind": "checks",
+          "via": "build pyproject.toml"
+        }
+      ],
+      "runsCount": 1,
+      "secrets": [],
+      "sends": {
+        "deploysPages": false,
+        "dispatchesTo": [],
+        "opensIssues": false,
+        "opensIssuesOnFailure": false,
+        "opensPullRequests": false,
+        "publishes": true,
+        "publishesTo": [
+          "pypi"
+        ],
+        "releases": false
+      },
+      "stages": [],
+      "triggers": [
+        {
+          "event": "release",
+          "types": [
+            "published"
+          ]
+        }
+      ],
+      "uses": [
+        "actions/checkout",
+        "actions/setup-python",
+        "pypa/gh-action-pypi-publish"
+      ],
+      "usesWorkflowToken": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "tests",
+      "fromTests": true,
+      "kind": "file",
+      "to": "record_index"
+    }
+  ],
+  "generatedFrom": {
+    "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab",
+    "tracked": 81
+  },
+  "landings": [
+    {
+      "readers": [
+        {
+          "by": "tests/test_claims.py",
+          "call": "literal",
+          "confidence": "ast",
+          "fromTests": true
+        }
+      ],
+      "target": "CHANGELOG.md",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "pyproject.toml",
+          "call": "configuration",
+          "confidence": "config"
+        },
+        {
+          "by": "tests/test_packaging.py",
+          "call": "literal",
+          "confidence": "ast",
+          "fromTests": true
+        }
+      ],
+      "target": "LICENSE",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "pyproject.toml",
+          "call": "configuration",
+          "confidence": "config"
+        }
+      ],
+      "target": "README.md",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "site/astro.config.mjs",
+          "call": "content-collection",
+          "confidence": "ast"
+        }
+      ],
+      "target": "site/src/content/docs",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "site/astro.config.mjs",
+          "call": "autogenerate",
+          "confidence": "ast"
+        }
+      ],
+      "target": "site/src/content/docs/handbook",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "tests/conftest.py",
+          "call": "literal",
+          "confidence": "ast",
+          "fromTests": true
+        }
+      ],
+      "target": "tests/fixtures",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "tests/conftest.py",
+          "call": "literal",
+          "confidence": "ast",
+          "fromTests": true
+        }
+      ],
+      "target": "tests/fixtures/alpha",
+      "writers": []
+    },
+    {
+      "readers": [
+        {
+          "by": "tests/conftest.py",
+          "call": "literal",
+          "confidence": "ast",
+          "fromTests": true
+        }
+      ],
+      "target": "tests/fixtures/beta",
+      "writers": []
+    }
+  ],
+  "overlaps": [],
+  "submodules": [],
+  "symlinks": [],
+  "testFiles": 37,
+  "unassigned": []
+}
