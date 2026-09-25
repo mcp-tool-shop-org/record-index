@@ -1,0 +1,170 @@
+{
+  "authored": [
+    ".github/",
+    "docs/",
+    "root",
+    "site/"
+  ],
+  "breaks": [
+    {
+      "doors": 2,
+      "importedBy": [],
+      "importedByTests": [
+        "tests"
+      ],
+      "kind": "part",
+      "name": "record_index",
+      "partLabel": "record_index"
+    }
+  ],
+  "changes": {
+    "first": true
+  },
+  "changesTogether": [],
+  "changesTogetherNote": [
+    "Window: 180 days; a pair counts from 3 shared commits, since the window holds fewer than 30 qualifying commits."
+  ],
+  "changesTogetherWithTests": 0,
+  "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab",
+  "defaultBranch": "main",
+  "derived": "6 parts, mostly Python (26 files), TypeScript (2) and JavaScript (1). Work enters through 3 doors; the busiest is CI, which reaches 2 parts. It publishes to PyPI.",
+  "doors": [
+    {
+      "checks": [],
+      "checksCount": 0,
+      "checksMore": 0,
+      "file": ".github/workflows/ci.yml",
+      "id": ".github/workflows/ci.yml",
+      "landings": [],
+      "name": "CI",
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "tests",
+          "depth": 0,
+          "files": 16
+        },
+        {
+          "boundary": "record_index",
+          "depth": 1,
+          "files": 6
+        }
+      ],
+      "runs": [
+        "tests/"
+      ],
+      "runsCount": 1,
+      "runsMore": 0,
+      "sends": [],
+      "stages": [],
+      "triggers": [
+        "on a pull request touching 5 paths",
+        "on a push touching 5 paths",
+        "or by hand"
+      ]
+    },
+    {
+      "checks": [],
+      "checksCount": 0,
+      "checksMore": 0,
+      "file": ".github/workflows/pages.yml",
+      "id": ".github/workflows/pages.yml",
+      "landings": [],
+      "name": "pages",
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "site",
+          "depth": 0,
+          "files": 3
+        }
+      ],
+      "runs": [
+        "site/astro.config.mjs",
+        "site/src/"
+      ],
+      "runsCount": 2,
+      "runsMore": 0,
+      "sends": [
+        "deploys the site"
+      ],
+      "stages": [],
+      "triggers": [
+        "on a push to main touching 2 paths",
+        "or by hand"
+      ]
+    },
+    {
+      "checks": [
+        "record_index/"
+      ],
+      "checksCount": 1,
+      "checksMore": 0,
+      "file": ".github/workflows/release.yml",
+      "id": ".github/workflows/release.yml",
+      "landings": [],
+      "name": "Release",
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "record_index",
+          "depth": 0,
+          "files": 10
+        }
+      ],
+      "runs": [],
+      "runsCount": 0,
+      "runsMore": 0,
+      "sends": [
+        "publishes to PyPI"
+      ],
+      "stages": [],
+      "triggers": [
+        "when a release is published"
+      ]
+    }
+  ],
+  "duplicates": [],
+  "duplicatesLead": null,
+  "duplicatesNote": [],
+  "edges": [],
+  "generated": [],
+  "generatedAt": "2026-09-25T09:50:19.865Z",
+  "limits": [
+    "1 import could not be resolved: `tests/test_packaging.py` imports a path built at run time.",
+    "1 write and 4 reads use paths built at run time and are not named here.",
+    "Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions."
+  ],
+  "mainDoor": ".github/workflows/ci.yml",
+  "partLabels": {
+    ".github": ".github",
+    "docs": "docs",
+    "record_index": "record_index",
+    "root": "the repository root",
+    "site": "the site",
+    "tests": "tests"
+  },
+  "parts": 6,
+  "readers": [],
+  "repo": "mcp-tool-shop-org/record-index",
+  "sequences": [],
+  "startDoor": ".github/workflows/ci.yml",
+  "startHere": [
+    ".github/workflows/ci.yml",
+    "record_index/__init__.py",
+    "record_index/conventions.py"
+  ],
+  "summary": null,
+  "summaryFrom": null,
+  "testFiles": 37,
+  "testedBy": {
+    "record_index": 16
+  },
+  "unnamedWrites": 1,
+  "unread": [],
+  "unreadFiles": 0,
+  "unreadNote": [],
+  "untested": [],
+  "untestedNote": [],
+  "written": 0
+}

@@ -1,0 +1,565 @@
+{
+  "authorship": {
+    "parts": [],
+    "places": []
+  },
+  "boundaries": [
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": ".github",
+      "qualifyingSourceCommits": 0,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "docs",
+      "qualifyingSourceCommits": 0,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": [
+          "tests"
+        ]
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "record_index",
+      "qualifyingSourceCommits": 1,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "root",
+      "qualifyingSourceCommits": 0,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "site",
+      "qualifyingSourceCommits": 1,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "tests",
+      "qualifyingSourceCommits": 1,
+      "rebaseline": null
+    }
+  ],
+  "churn": {
+    "definition": "commits is how many commits in the window touch the file, including merges and commits dropped from coupling. lines is added plus deleted in those commits.",
+    "files": [
+      {
+        "commits": 2,
+        "lines": 60,
+        "path": ".github/workflows/ci.yml"
+      },
+      {
+        "commits": 1,
+        "lines": 64,
+        "path": ".github/workflows/pages.yml"
+      },
+      {
+        "commits": 1,
+        "lines": 48,
+        "path": ".github/workflows/release.yml"
+      },
+      {
+        "commits": 2,
+        "lines": 26,
+        "path": ".gitignore"
+      },
+      {
+        "commits": 2,
+        "lines": 114,
+        "path": "CHANGELOG.md"
+      },
+      {
+        "commits": 1,
+        "lines": 21,
+        "path": "LICENSE"
+      },
+      {
+        "commits": 1,
+        "lines": 55,
+        "path": "README.es.md"
+      },
+      {
+        "commits": 1,
+        "lines": 55,
+        "path": "README.fr.md"
+      },
+      {
+        "commits": 1,
+        "lines": 57,
+        "path": "README.hi.md"
+      },
+      {
+        "commits": 1,
+        "lines": 55,
+        "path": "README.it.md"
+      },
+      {
+        "commits": 1,
+        "lines": 56,
+        "path": "README.ja.md"
+      },
+      {
+        "commits": 7,
+        "lines": 142,
+        "path": "README.md"
+      },
+      {
+        "commits": 1,
+        "lines": 55,
+        "path": "README.pt-BR.md"
+      },
+      {
+        "commits": 1,
+        "lines": 57,
+        "path": "README.zh.md"
+      },
+      {
+        "commits": 1,
+        "lines": 146,
+        "path": "SECURITY.md"
+      },
+      {
+        "commits": 1,
+        "lines": 0,
+        "path": "docs/assets/logo-alt.png"
+      },
+      {
+        "commits": 3,
+        "lines": 0,
+        "path": "docs/assets/logo-wide.png"
+      },
+      {
+        "commits": 1,
+        "lines": 0,
+        "path": "docs/assets/logo.png"
+      },
+      {
+        "commits": 2,
+        "lines": 38,
+        "path": "pyproject.toml"
+      },
+      {
+        "commits": 1,
+        "lines": 279,
+        "path": "record_index/__init__.py"
+      },
+      {
+        "commits": 1,
+        "lines": 176,
+        "path": "record_index/certificate.py"
+      },
+      {
+        "commits": 1,
+        "lines": 199,
+        "path": "record_index/claims.py"
+      },
+      {
+        "commits": 1,
+        "lines": 181,
+        "path": "record_index/cli.py"
+      },
+      {
+        "commits": 1,
+        "lines": 304,
+        "path": "record_index/conventions.py"
+      },
+      {
+        "commits": 1,
+        "lines": 539,
+        "path": "record_index/index.py"
+      },
+      {
+        "commits": 1,
+        "lines": 100,
+        "path": "record_index/mechanism.py"
+      },
+      {
+        "commits": 1,
+        "lines": 885,
+        "path": "record_index/parse.py"
+      },
+      {
+        "commits": 1,
+        "lines": 190,
+        "path": "record_index/text.py"
+      },
+      {
+        "commits": 1,
+        "lines": 185,
+        "path": "record_index/vocab.py"
+      },
+      {
+        "commits": 1,
+        "lines": 39,
+        "path": "site/astro.config.mjs"
+      },
+      {
+        "commits": 2,
+        "lines": 8131,
+        "path": "site/package-lock.json"
+      },
+      {
+        "commits": 1,
+        "lines": 18,
+        "path": "site/package.json"
+      },
+      {
+        "commits": 1,
+        "lines": 12,
+        "path": "site/public/favicon.svg"
+      },
+      {
+        "commits": 1,
+        "lines": 7,
+        "path": "site/src/content.config.ts"
+      },
+      {
+        "commits": 1,
+        "lines": 233,
+        "path": "site/src/content/docs/handbook/conventions.md"
+      },
+      {
+        "commits": 1,
+        "lines": 168,
+        "path": "site/src/content/docs/handbook/getting-started.md"
+      },
+      {
+        "commits": 1,
+        "lines": 90,
+        "path": "site/src/content/docs/handbook/index.md"
+      },
+      {
+        "commits": 2,
+        "lines": 202,
+        "path": "site/src/content/docs/handbook/known-defects.md"
+      },
+      {
+        "commits": 1,
+        "lines": 212,
+        "path": "site/src/content/docs/handbook/verify-and-certificate.md"
+      },
+      {
+        "commits": 1,
+        "lines": 88,
+        "path": "site/src/pages/index.astro"
+      },
+      {
+        "commits": 1,
+        "lines": 209,
+        "path": "site/src/site-config.ts"
+      },
+      {
+        "commits": 1,
+        "lines": 7,
+        "path": "site/src/styles/global.css"
+      },
+      {
+        "commits": 1,
+        "lines": 19,
+        "path": "site/src/styles/starlight-custom.css"
+      },
+      {
+        "commits": 1,
+        "lines": 5,
+        "path": "site/tsconfig.json"
+      },
+      {
+        "commits": 1,
+        "lines": 191,
+        "path": "tests/conftest.py"
+      },
+      {
+        "commits": 1,
+        "lines": 15,
+        "path": "tests/fixtures/alpha/CHANGELOG.md"
+      },
+      {
+        "commits": 1,
+        "lines": 36,
+        "path": "tests/fixtures/alpha/CLAUDE.md"
+      },
+      {
+        "commits": 1,
+        "lines": 33,
+        "path": "tests/fixtures/alpha/OVERVIEW.md"
+      },
+      {
+        "commits": 1,
+        "lines": 13,
+        "path": "tests/fixtures/alpha/docs/experiments/E01-executor-kickoff.md"
+      },
+      {
+        "commits": 1,
+        "lines": 35,
+        "path": "tests/fixtures/alpha/docs/experiments/E01-ruling.md"
+      },
+      {
+        "commits": 1,
+        "lines": 17,
+        "path": "tests/fixtures/alpha/docs/experiments/E01-spec.md"
+      },
+      {
+        "commits": 1,
+        "lines": 14,
+        "path": "tests/fixtures/alpha/docs/experiments/E02-offsurface-ruling.md"
+      },
+      {
+        "commits": 1,
+        "lines": 15,
+        "path": "tests/fixtures/alpha/docs/experiments/E02-report.md"
+      },
+      {
+        "commits": 1,
+        "lines": 15,
+        "path": "tests/fixtures/alpha/docs/experiments/E02-ruling.md"
+      },
+      {
+        "commits": 1,
+        "lines": 16,
+        "path": "tests/fixtures/alpha/docs/experiments/INDEX.md"
+      },
+      {
+        "commits": 1,
+        "lines": 15,
+        "path": "tests/fixtures/alpha/docs/handbook/index.md"
+      },
+      {
+        "commits": 1,
+        "lines": 311,
+        "path": "tests/fixtures/alpha/docs/index/conventions.json"
+      },
+      {
+        "commits": 1,
+        "lines": 21,
+        "path": "tests/fixtures/alpha/profiles/character.json"
+      },
+      {
+        "commits": 1,
+        "lines": 27,
+        "path": "tests/fixtures/beta/LAWS.md"
+      },
+      {
+        "commits": 1,
+        "lines": 9,
+        "path": "tests/fixtures/beta/OVERVIEW.md"
+      },
+      {
+        "commits": 1,
+        "lines": 204,
+        "path": "tests/fixtures/beta/index/conventions.json"
+      },
+      {
+        "commits": 1,
+        "lines": 10,
+        "path": "tests/fixtures/beta/live/status.md"
+      },
+      {
+        "commits": 1,
+        "lines": 8,
+        "path": "tests/fixtures/beta/loose/stray.md"
+      },
+      {
+        "commits": 1,
+        "lines": 20,
+        "path": "tests/fixtures/beta/record/arcs/A01-decision.md"
+      },
+      {
+        "commits": 1,
+        "lines": 12,
+        "path": "tests/fixtures/beta/record/arcs/A02-decision.md"
+      },
+      {
+        "commits": 1,
+        "lines": 15,
+        "path": "tests/fixtures/beta/record/arcs/A02-report.md"
+      },
+      {
+        "commits": 1,
+        "lines": 299,
+        "path": "tests/test_binding.py"
+      },
+      {
+        "commits": 1,
+        "lines": 309,
+        "path": "tests/test_certificate.py"
+      },
+      {
+        "commits": 1,
+        "lines": 302,
+        "path": "tests/test_claims.py"
+      },
+      {
+        "commits": 2,
+        "lines": 448,
+        "path": "tests/test_cli.py"
+      },
+      {
+        "commits": 1,
+        "lines": 350,
+        "path": "tests/test_conventions.py"
+      },
+      {
+        "commits": 1,
+        "lines": 163,
+        "path": "tests/test_determinism.py"
+      },
+      {
+        "commits": 1,
+        "lines": 474,
+        "path": "tests/test_gates_and_writes.py"
+      },
+      {
+        "commits": 1,
+        "lines": 231,
+        "path": "tests/test_index_build.py"
+      },
+      {
+        "commits": 1,
+        "lines": 87,
+        "path": "tests/test_mechanism.py"
+      },
+      {
+        "commits": 1,
+        "lines": 126,
+        "path": "tests/test_packaging.py"
+      },
+      {
+        "commits": 1,
+        "lines": 675,
+        "path": "tests/test_parse.py"
+      },
+      {
+        "commits": 1,
+        "lines": 163,
+        "path": "tests/test_query.py"
+      },
+      {
+        "commits": 1,
+        "lines": 252,
+        "path": "tests/test_text.py"
+      },
+      {
+        "commits": 1,
+        "lines": 431,
+        "path": "tests/test_verify.py"
+      },
+      {
+        "commits": 1,
+        "lines": 194,
+        "path": "tests/test_vocab.py"
+      }
+    ]
+  },
+  "confidence": {
+    "level": "low",
+    "reason": "fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions"
+  },
+  "generatedAt": "2026-09-25T09:50:19.865Z",
+  "generatedFrom": {
+    "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab"
+  },
+  "pairs": [],
+  "parameters": {
+    "appliedChangesetLimit": 20.25,
+    "changeset": 50,
+    "changesetFraction": 0.25,
+    "cohesionDrop": 0.2,
+    "couplingPopulation": "source",
+    "fallenShared": 3,
+    "floor": "fallen",
+    "floorHeld": false,
+    "floorTrigger": "both",
+    "headDate": "2026-09-17T17:56:01-07:00",
+    "inScopeFiles": 81,
+    "pinnedStart": null,
+    "priorFloor": null,
+    "qualifyingCommits": 12,
+    "qualifyingMinimum": 30,
+    "revisions": 5,
+    "shared": 10,
+    "sharedFloorUsed": 3,
+    "since": "2026-03-22T00:56:01.000Z",
+    "sourceExtensions": [
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".mts",
+      ".cts",
+      ".py",
+      ".rs",
+      ".gd"
+    ],
+    "sourceFileReach": 20,
+    "sourceFileRise": 25,
+    "sourceFilesReachingStrongFloor": 0,
+    "strength": 0.5,
+    "windowDays": 180
+  },
+  "strengthDefinition": "strength is the shared qualifying commits divided by either. either is the number of qualifying commits that touch either file."
+}
