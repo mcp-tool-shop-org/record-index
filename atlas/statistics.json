@@ -107,8 +107,8 @@
     "definition": "commits is how many commits in the window touch the file, including merges and commits dropped from coupling. lines is added plus deleted in those commits.",
     "files": [
       {
-        "commits": 2,
-        "lines": 60,
+        "commits": 6,
+        "lines": 277,
         "path": ".github/workflows/ci.yml"
       },
       {
@@ -180,6 +180,36 @@
         "commits": 1,
         "lines": 146,
         "path": "SECURITY.md"
+      },
+      {
+        "commits": 1,
+        "lines": 76,
+        "path": "atlas/README.md"
+      },
+      {
+        "commits": 1,
+        "lines": 26,
+        "path": "atlas/boundaries.yaml"
+      },
+      {
+        "commits": 1,
+        "lines": 170,
+        "path": "atlas/page.json"
+      },
+      {
+        "commits": 1,
+        "lines": 565,
+        "path": "atlas/statistics.json"
+      },
+      {
+        "commits": 1,
+        "lines": 1382,
+        "path": "atlas/structure.json"
+      },
+      {
+        "commits": 2,
+        "lines": 36,
+        "path": "codecov.yml"
       },
       {
         "commits": 1,
@@ -515,15 +545,15 @@
   },
   "confidence": {
     "level": "low",
-    "reason": "fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions"
+    "reason": "fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions"
   },
-  "generatedAt": "2026-09-25T09:50:19.865Z",
+  "generatedAt": "2026-09-30T20:11:46.759Z",
   "generatedFrom": {
-    "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab"
+    "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c"
   },
   "pairs": [],
   "parameters": {
-    "appliedChangesetLimit": 20.25,
+    "appliedChangesetLimit": 21.75,
     "changeset": 50,
     "changesetFraction": 0.25,
     "cohesionDrop": 0.2,
@@ -532,16 +562,16 @@
     "floor": "fallen",
     "floorHeld": false,
     "floorTrigger": "both",
-    "headDate": "2026-09-17T17:56:01-07:00",
-    "inScopeFiles": 81,
+    "headDate": "2026-09-29T16:47:46-07:00",
+    "inScopeFiles": 87,
     "pinnedStart": null,
-    "priorFloor": null,
-    "qualifyingCommits": 12,
+    "priorFloor": "fallen",
+    "qualifyingCommits": 15,
     "qualifyingMinimum": 30,
     "revisions": 5,
     "shared": 10,
     "sharedFloorUsed": 3,
-    "since": "2026-03-22T00:56:01.000Z",
+    "since": "2026-04-02T23:47:46.000Z",
     "sourceExtensions": [
       ".js",
       ".mjs",

@@ -61,7 +61,7 @@ jobs:
 
       - name: Atlas check
         if: matrix.python-version == '3.13'
-        run: npx --yes @dogfood-lab/atlas@1.21.0 check
+        run: npx --yes @dogfood-lab/atlas@1.24.0 check
 
       # pytest is installed HERE rather than declared as an extra. The runtime
       # dependency list is empty and that is a property the package is sold on:
