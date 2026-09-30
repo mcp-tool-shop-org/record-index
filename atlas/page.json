@@ -7,7 +7,7 @@
   ],
   "breaks": [
     {
-      "doors": 2,
+      "doors": 3,
       "importedBy": [],
       "importedByTests": [
         "tests"
@@ -18,16 +18,56 @@
     }
   ],
   "changes": {
-    "first": true
+    "fileCounts": {
+      "added": 1,
+      "changed": 1,
+      "moved": 0,
+      "parts": 2,
+      "removed": 0
+    },
+    "items": [
+      {
+        "kind": "door",
+        "sentence": "CI's pull request trigger now also names `codecov.yml`.",
+        "subjects": [
+          ".github/workflows/ci.yml"
+        ]
+      },
+      {
+        "kind": "door",
+        "sentence": "CI's push trigger now also names `codecov.yml`.",
+        "subjects": [
+          ".github/workflows/ci.yml"
+        ]
+      },
+      {
+        "kind": "door",
+        "sentence": "record_index (pyproject.toml) is a new package. It loads record_index/__init__.py.",
+        "subjects": [
+          "pyproject.toml",
+          "record_index/__init__.py"
+        ]
+      },
+      {
+        "kind": "counts",
+        "sentence": "1 file added and 1 changed content, across 2 parts.",
+        "subjects": []
+      }
+    ],
+    "since": {
+      "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab",
+      "generatedAt": "2026-09-25T09:50:19.865Z"
+    },
+    "unchanged": false
   },
   "changesTogether": [],
   "changesTogetherNote": [
     "Window: 180 days; a pair counts from 3 shared commits, since the window holds fewer than 30 qualifying commits."
   ],
   "changesTogetherWithTests": 0,
-  "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab",
+  "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c",
   "defaultBranch": "main",
-  "derived": "6 parts, mostly Python (26 files), TypeScript (2) and JavaScript (1). Work enters through 3 doors; the busiest is CI, which reaches 2 parts. It publishes to PyPI.",
+  "derived": "6 parts, mostly Python (26 files), CSS (2), TypeScript (2), Astro (1) and JavaScript (1). Work enters through 4 doors; the busiest is CI, which reaches 2 parts. It publishes to PyPI. It deploys a site to GitHub Pages. People import record_index.",
   "doors": [
     {
       "checks": [],
@@ -47,7 +87,7 @@
         {
           "boundary": "record_index",
           "depth": 1,
-          "files": 6
+          "files": 10
         }
       ],
       "runs": [
@@ -55,11 +95,13 @@
       ],
       "runsCount": 1,
       "runsMore": 0,
-      "sends": [],
+      "sends": [
+        "uploads coverage to Codecov"
+      ],
       "stages": [],
       "triggers": [
-        "on a pull request touching 5 paths",
-        "on a push touching 5 paths",
+        "on a pull request touching 6 paths",
+        "on a push touching 6 paths",
         "or by hand"
       ]
     },
@@ -76,7 +118,7 @@
         {
           "boundary": "site",
           "depth": 0,
-          "files": 3
+          "files": 5
         }
       ],
       "runs": [
@@ -122,18 +164,46 @@
       "triggers": [
         "when a release is published"
       ]
+    },
+    {
+      "checks": [],
+      "checksCount": 0,
+      "checksMore": 0,
+      "file": "pyproject.toml",
+      "id": "pyproject.toml#record_index",
+      "kind": "package",
+      "landings": [],
+      "name": "record_index",
+      "pushes": false,
+      "reach": [
+        {
+          "boundary": "record_index",
+          "depth": 0,
+          "files": 8
+        }
+      ],
+      "runs": [
+        "record_index/__init__.py"
+      ],
+      "runsCount": 1,
+      "runsMore": 0,
+      "sends": [],
+      "stages": [],
+      "triggers": []
     }
   ],
   "duplicates": [],
   "duplicatesLead": null,
   "duplicatesNote": [],
   "edges": [],
+  "engine": "1.24.0",
   "generated": [],
-  "generatedAt": "2026-09-25T09:50:19.865Z",
+  "generatedAt": "2026-09-30T20:11:46.759Z",
   "limits": [
     "1 import could not be resolved: `tests/test_packaging.py` imports a path built at run time.",
-    "1 write and 4 reads use paths built at run time and are not named here.",
-    "Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions."
+    "1 read uses a path built at run time and is not named here.",
+    "7 writes and 3 reads go to a path their caller passes, not to this repository.",
+    "Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions."
   ],
   "mainDoor": ".github/workflows/ci.yml",
   "partLabels": {
@@ -148,19 +218,19 @@
   "readers": [],
   "repo": "mcp-tool-shop-org/record-index",
   "sequences": [],
-  "startDoor": ".github/workflows/ci.yml",
+  "startDoor": "pyproject.toml#record_index",
   "startHere": [
-    ".github/workflows/ci.yml",
     "record_index/__init__.py",
     "record_index/conventions.py"
   ],
+  "startReason": "This path follows record_index (the package people import) from its entry, since CI runs only tests.",
   "summary": null,
   "summaryFrom": null,
   "testFiles": 37,
   "testedBy": {
     "record_index": 16
   },
-  "unnamedWrites": 1,
+  "unnamedWrites": 0,
   "unread": [],
   "unreadFiles": 0,
   "unreadNote": [],
