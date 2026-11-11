@@ -1,17 +1,14 @@
 # record-index: how it works
 
-Mapped at 2026-09-30 from commit 2c20d4b by Atlas 1.24.0.
+Mapped at 2026-11-11 from commit 99efde1 by Atlas 1.26.0.
 
 ## What this is
 
 6 parts, mostly Python (26 files), CSS (2), TypeScript (2), Astro (1) and JavaScript (1). Work enters through 4 doors; the busiest is CI, which reaches 2 parts. It publishes to PyPI. It deploys a site to GitHub Pages. People import record_index.
 
-## What changed since 2026-09-25 (a9a84a2)
+## What changed since 2026-09-30 (2c20d4b)
 
-- CI's pull request trigger now also names `codecov.yml`.
-- CI's push trigger now also names `codecov.yml`.
-- record_index (pyproject.toml) is a new package. It loads record_index/__init__.py.
-- 1 file added and 1 changed content, across 2 parts.
+Nothing structural changed since 2026-09-30; 3 files changed content.
 
 ## What comes in
 

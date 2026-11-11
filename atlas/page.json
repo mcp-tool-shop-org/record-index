@@ -19,53 +19,31 @@
   ],
   "changes": {
     "fileCounts": {
-      "added": 1,
-      "changed": 1,
+      "added": 0,
+      "changed": 3,
       "moved": 0,
       "parts": 2,
       "removed": 0
     },
     "items": [
       {
-        "kind": "door",
-        "sentence": "CI's pull request trigger now also names `codecov.yml`.",
-        "subjects": [
-          ".github/workflows/ci.yml"
-        ]
-      },
-      {
-        "kind": "door",
-        "sentence": "CI's push trigger now also names `codecov.yml`.",
-        "subjects": [
-          ".github/workflows/ci.yml"
-        ]
-      },
-      {
-        "kind": "door",
-        "sentence": "record_index (pyproject.toml) is a new package. It loads record_index/__init__.py.",
-        "subjects": [
-          "pyproject.toml",
-          "record_index/__init__.py"
-        ]
-      },
-      {
         "kind": "counts",
-        "sentence": "1 file added and 1 changed content, across 2 parts.",
+        "sentence": "Nothing structural changed since 2026-09-30; 3 files changed content.",
         "subjects": []
       }
     ],
     "since": {
-      "commit": "a9a84a20df735bd0eb1fcebd9714f918a160b3ab",
-      "generatedAt": "2026-09-25T09:50:19.865Z"
+      "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c",
+      "generatedAt": "2026-09-30T20:11:46.759Z"
     },
-    "unchanged": false
+    "unchanged": true
   },
   "changesTogether": [],
   "changesTogetherNote": [
     "Window: 180 days; a pair counts from 3 shared commits, since the window holds fewer than 30 qualifying commits."
   ],
   "changesTogetherWithTests": 0,
-  "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c",
+  "commit": "99efde107a6160e0b4561ca79d7495562eb16448",
   "defaultBranch": "main",
   "derived": "6 parts, mostly Python (26 files), CSS (2), TypeScript (2), Astro (1) and JavaScript (1). Work enters through 4 doors; the busiest is CI, which reaches 2 parts. It publishes to PyPI. It deploys a site to GitHub Pages. People import record_index.",
   "doors": [
@@ -196,9 +174,9 @@
   "duplicatesLead": null,
   "duplicatesNote": [],
   "edges": [],
-  "engine": "1.24.0",
+  "engine": "1.26.0",
   "generated": [],
-  "generatedAt": "2026-09-30T20:11:46.759Z",
+  "generatedAt": "2026-11-11T22:32:11.359Z",
   "limits": [
     "1 import could not be resolved: `tests/test_packaging.py` imports a path built at run time.",
     "1 read uses a path built at run time and is not named here.",
@@ -230,6 +208,7 @@
   "testedBy": {
     "record_index": 16
   },
+  "testedCodeParts": 1,
   "unnamedWrites": 0,
   "unread": [],
   "unreadFiles": 0,

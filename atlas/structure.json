@@ -9,7 +9,7 @@
       "externals": 0,
       "files": [
         {
-          "hash": "527b8f81906ae4bfa5b2145df69424196fbc9f59f2f6c6875940513c07f66e56",
+          "hash": "4c2319409ec87784579b8b9a6cb2d58ddadca5134f0ae7d7c9557ed844d48d55",
           "path": ".github/workflows/ci.yml"
         },
         {
@@ -17,7 +17,7 @@
           "path": ".github/workflows/pages.yml"
         },
         {
-          "hash": "07fe913c9c9ac1716e2290cb3fe27cdfd33a5c36b53180b6326e8d0c99bb447e",
+          "hash": "c727326e5eac53f0420e26b4a8309eb46b9ed1140452397663f278e6aaa79de5",
           "path": ".github/workflows/release.yml"
         }
       ],
@@ -497,7 +497,7 @@
           "path": "site/astro.config.mjs"
         },
         {
-          "hash": "076d274bbd21ea581efa6500e33f8ff883c86595f47a959073e135268514500b",
+          "hash": "25a2e1813502bae5aaf0a688c35c93d26024eed894b558310be43bd8a7d3655c",
           "path": "site/package-lock.json"
         },
         {
@@ -1479,6 +1479,13 @@
           "event": "workflow_dispatch"
         }
       ],
+      "unresolvedExpressions": [
+        {
+          "adds": "flags",
+          "job": "test",
+          "step": "Run the suite"
+        }
+      ],
       "uses": [
         "actions/checkout",
         "actions/download-artifact",
@@ -1791,9 +1798,9 @@
       "to": "record_index"
     }
   ],
-  "engine": "1.24.0",
+  "engine": "1.26.0",
   "generatedFrom": {
-    "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c",
+    "commit": "99efde107a6160e0b4561ca79d7495562eb16448",
     "tracked": 82
   },
   "landings": [
