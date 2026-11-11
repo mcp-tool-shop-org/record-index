@@ -107,8 +107,8 @@
     "definition": "commits is how many commits in the window touch the file, including merges and commits dropped from coupling. lines is added plus deleted in those commits.",
     "files": [
       {
-        "commits": 6,
-        "lines": 277,
+        "commits": 8,
+        "lines": 281,
         "path": ".github/workflows/ci.yml"
       },
       {
@@ -117,8 +117,8 @@
         "path": ".github/workflows/pages.yml"
       },
       {
-        "commits": 1,
-        "lines": 48,
+        "commits": 2,
+        "lines": 50,
         "path": ".github/workflows/release.yml"
       },
       {
@@ -182,8 +182,8 @@
         "path": "SECURITY.md"
       },
       {
-        "commits": 1,
-        "lines": 76,
+        "commits": 3,
+        "lines": 140,
         "path": "atlas/README.md"
       },
       {
@@ -192,18 +192,18 @@
         "path": "atlas/boundaries.yaml"
       },
       {
-        "commits": 1,
-        "lines": 170,
+        "commits": 3,
+        "lines": 370,
         "path": "atlas/page.json"
       },
       {
-        "commits": 1,
-        "lines": 565,
+        "commits": 3,
+        "lines": 669,
         "path": "atlas/statistics.json"
       },
       {
-        "commits": 1,
-        "lines": 1382,
+        "commits": 3,
+        "lines": 2622,
         "path": "atlas/structure.json"
       },
       {
@@ -287,8 +287,8 @@
         "path": "site/astro.config.mjs"
       },
       {
-        "commits": 2,
-        "lines": 8131,
+        "commits": 4,
+        "lines": 8143,
         "path": "site/package-lock.json"
       },
       {
@@ -547,9 +547,9 @@
     "level": "low",
     "reason": "fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions"
   },
-  "generatedAt": "2026-09-30T20:11:46.759Z",
+  "generatedAt": "2026-11-11T22:32:11.359Z",
   "generatedFrom": {
-    "commit": "2c20d4bed8c8da71378a997e265291cb54b7ad5c"
+    "commit": "99efde107a6160e0b4561ca79d7495562eb16448"
   },
   "pairs": [],
   "parameters": {
@@ -562,16 +562,16 @@
     "floor": "fallen",
     "floorHeld": false,
     "floorTrigger": "both",
-    "headDate": "2026-09-29T16:47:46-07:00",
+    "headDate": "2026-10-20T17:01:24-04:00",
     "inScopeFiles": 87,
     "pinnedStart": null,
     "priorFloor": "fallen",
-    "qualifyingCommits": 15,
+    "qualifyingCommits": 18,
     "qualifyingMinimum": 30,
     "revisions": 5,
     "shared": 10,
     "sharedFloorUsed": 3,
-    "since": "2026-04-02T23:47:46.000Z",
+    "since": "2026-04-23T21:01:24.000Z",
     "sourceExtensions": [
       ".js",
       ".mjs",
